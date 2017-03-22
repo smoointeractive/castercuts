@@ -1,0 +1,2 @@
+serviceClass: pl.czak.gwtsample.client.GreetingService
+path: DB3287FA620D2B33C52FA2AF57F92C48.gwt.rpc
