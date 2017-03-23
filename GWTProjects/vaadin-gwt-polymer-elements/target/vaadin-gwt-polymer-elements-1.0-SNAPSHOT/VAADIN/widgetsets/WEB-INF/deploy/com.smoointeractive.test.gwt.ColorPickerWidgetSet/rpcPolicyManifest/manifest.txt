@@ -1,0 +1,2 @@
+# Module com.smoointeractive.test.gwt.ColorPickerWidgetSet
+# RPC service class, partial path of RPC policy file

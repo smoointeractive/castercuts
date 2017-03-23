@@ -1,13 +1,13 @@
 binding: user.agent=safari
 Compiling module pl.czak.gwtsample.SampleApp
-   Unification traversed 20910 fields and methods and 1994 types. 1962 are considered part of the current module and 1962 had all of their fields and methods traversed.
+   Unification traversed 962 fields and methods and 573 types. 5 are considered part of the current module and 10 had all of their fields and methods traversed.
    Compiling 1 permutation
       Compiling permutation 0...
-      Linking per-type JS with 1942 new/changed types.
+      Linking per-type JS with 5 new/changed types.
       Source Maps Enabled
    Compile of permutations succeeded
-   Compilation succeeded -- 7.727s
+   Compilation succeeded -- 2.731s
 Linking into /Users/sachamoo/Projects/GWTProjects/gwtsample/target/gwt/devmode/work/pl.czak.gwtsample.SampleApp/compile-2/war/sampleapp; Writing extras to /Users/sachamoo/Projects/GWTProjects/gwtsample/target/gwt/devmode/work/pl.czak.gwtsample.SampleApp/compile-2/extras/sampleapp
    Link succeeded
-   Linking succeeded -- 0.360s
-8.159s total -- Compile completed
+   Linking succeeded -- 0.227s
+3.496s total -- Compile completed

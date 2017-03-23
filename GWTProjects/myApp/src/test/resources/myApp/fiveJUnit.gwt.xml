@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="five">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='myApp.five' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/five/greet" class="myApp.server.GreetingServiceImpl" />
+
+</module>

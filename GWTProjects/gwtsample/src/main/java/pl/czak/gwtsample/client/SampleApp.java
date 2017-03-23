@@ -42,6 +42,8 @@ public class SampleApp implements EntryPoint {
     final TextBox nameField = new TextBox();
     nameField.setText("GWT User");
     final Label errorLabel = new Label();
+    final Button sampleButton = new Button("ClickMe");
+    final Label thisIsATest = new Label();
 
     // We can add style names to widgets
     sendButton.addStyleName("sendButton");
@@ -51,6 +53,8 @@ public class SampleApp implements EntryPoint {
     RootPanel.get("nameFieldContainer").add(nameField);
     RootPanel.get("sendButtonContainer").add(sendButton);
     RootPanel.get("errorLabelContainer").add(errorLabel);
+    RootPanel.get("sendButtonContainer").add(sampleButton);
+    RootPanel.get("errorLabelContainer").add(thisIsATest);
 
     // Focus the cursor on the name field when the app loads
     nameField.setFocus(true);
