@@ -21,63 +21,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <file leaf-file-name="ColorPicker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/test/ColorPicker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1490305495000" expanded="true" signature="59:43654" ph="..." />
-                <marker date="1490305495000" expanded="true" signature="98:693" ph="..." />
-                <marker date="1490305495000" expanded="true" signature="740:797" ph="..." />
-                <marker date="1490305495000" expanded="true" signature="914:987" ph="..." />
-                <marker date="1490305495000" expanded="true" signature="1026:1496" ph="..." />
-                <marker date="1490305495000" expanded="true" signature="1068:1496" ph="..." />
-                <marker date="1490305495000" expanded="true" signature="1150:1496" ph="..." />
-                <marker date="1490305495000" expanded="true" signature="1214:1496" ph="..." />
-                <marker date="1490305495000" expanded="true" signature="1280:1496" ph="..." />
-                <marker date="1490305495000" expanded="true" signature="1328:1496" ph="..." />
-                <marker date="1490305495000" expanded="true" signature="40975:41089" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modules.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="-105">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ColorPickerWidgetSet.gwt.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ColorPickerApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/test/ColorPickerApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ColorPickerWidgetSet.gwt.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/test/gwt/ColorPickerWidgetSet.gwt.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-90">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GwtColorPicker.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/test/gwt/client/ui/GwtColorPicker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-945">
-              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VColorPicker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/test/gwt/client/ui/VColorPicker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -88,6 +56,13 @@
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/test/ColorPickerApplication.java" />
+      </list>
     </option>
   </component>
   <component name="MavenImportPreferences">
@@ -114,6 +89,10 @@
           <option name="myItemId" value="Vaadin Web Application" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -127,6 +106,52 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="Run Configurations" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RunConfigurationsNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Vaadin Web Application" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="war" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Vaadin Web Application" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Vaadin Web Application" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -171,6 +196,90 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vaadin-gwt-polymer-elements" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vaadin-gwt-polymer-elements" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vaadin-gwt-polymer-elements" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vaadin-gwt-polymer-elements" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vaadin-gwt-polymer-elements" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vaadin-gwt-polymer-elements" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vaadin-gwt-polymer-elements" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vaadin-gwt-polymer-elements" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gwt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -185,31 +294,7 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Maven.vaadin-gwt-polymer-elements [gwt:run]">
-    <configuration default="false" name="vaadin-gwt-polymer-elements [war:exploded]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="war:exploded" />
-              </list>
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Maven.vaadin-gwt-polymer-elements [war:exploded]">
     <configuration default="false" name="vaadin-gwt-polymer-elements [gwt:compile]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -258,7 +343,7 @@
       </MavenSettings>
       <method />
     </configuration>
-    <configuration default="false" name="vaadin-gwt-polymer-elements [install:install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+    <configuration default="false" name="vaadin-gwt-polymer-elements [clean]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -269,7 +354,7 @@
             </option>
             <option name="goals">
               <list>
-                <option value="install:install" />
+                <option value="clean" />
               </list>
             </option>
             <option name="profilesMap">
@@ -282,7 +367,7 @@
       </MavenSettings>
       <method />
     </configuration>
-    <configuration default="false" name="vaadin-gwt-polymer-elements [jetty:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+    <configuration default="false" name="vaadin-gwt-polymer-elements [compile]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -293,7 +378,31 @@
             </option>
             <option name="goals">
               <list>
-                <option value="jetty:run" />
+                <option value="compile" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="vaadin-gwt-polymer-elements [war:exploded]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="war:exploded" />
               </list>
             </option>
             <option name="profilesMap">
@@ -573,19 +682,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [war:exploded]" />
-      <item index="1" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [gwt:compile]" />
-      <item index="2" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [gwt:run]" />
-      <item index="3" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [install:install]" />
-      <item index="4" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [jetty:run]" />
+      <item index="0" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [gwt:compile]" />
+      <item index="1" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [gwt:run]" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [clean]" />
+      <item index="3" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [compile]" />
+      <item index="4" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [war:exploded]" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [gwt:run]" />
-        <item index="1" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [jetty:run]" />
-        <item index="2" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [gwt:compile]" />
-        <item index="3" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [install:install]" />
-        <item index="4" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [war:exploded]" />
+        <item index="0" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [gwt:compile]" />
+        <item index="1" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [gwt:run]" />
+        <item index="2" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [compile]" />
+        <item index="3" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [war:exploded]" />
+        <item index="4" class="java.lang.String" itemvalue="Maven.vaadin-gwt-polymer-elements [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -613,7 +722,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -656,19 +765,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1490305495000" expanded="true" signature="59:43654" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="98:693" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="740:797" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="914:987" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1026:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1068:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1150:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1214:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1280:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1328:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="40975:41089" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -676,19 +773,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1490305495000" expanded="true" signature="59:43654" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="98:693" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="740:797" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="914:987" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1026:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1068:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1150:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1214:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1280:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1328:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="40975:41089" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -700,22 +785,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/test/gwt/client/ui/VColorPicker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-750">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/test/gwt/client/ui/GwtColorPicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="32" column="27" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/smoointeractive/test/ColorPicker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1490305495000" expanded="true" signature="59:43654" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="98:693" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="740:797" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="914:987" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1026:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1068:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1150:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1214:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1280:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="1328:1496" ph="..." />
-            <marker date="1490305495000" expanded="true" signature="40975:41089" ph="..." />
+            <element signature="e#0#1212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/smoointeractive/test/ColorPickerApplication.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-117">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1193#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -728,7 +829,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/test/gwt/ColorPickerWidgetSet.gwt.xml">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -736,18 +837,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/test/gwt/client/ui/VColorPicker.java">
+    <entry file="file://$PROJECT_DIR$/target/.generated/com/vaadin/terminal/gwt/client/WidgetMapImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="-15">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/test/gwt/client/ui/GwtColorPicker.java">
+    <entry file="file://$PROJECT_DIR$/target/.generated/com/google/gwt/i18n/client/impl/LocaleInfoImpl_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-945">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/test/ColorPicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/test/ColorPickerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/test/gwt/ColorPickerWidgetSet.gwt.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

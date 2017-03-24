@@ -50,20 +50,21 @@ public class ColorPickerApplication extends com.vaadin.Application {
                         + colorselector.getColor());
             }
         });
-        main.addComponent(colorselector);
-
+//        main.addComponent(colorselector);
         // Add another component to give feedback from server-side code
-        colorname = new Label("Selected color: " + colorselector.getColor());
-        main.addComponent(colorname);
+//        colorname = new Label("Selected color: " + colorselector.getColor());
+//        main.addComponent(colorname);
 
         // Server-side manipulation of the component state
-        final Button button = new Button("Set to white");
-        button.addListener(new Button.ClickListener() {
-            public void buttonClick(ClickEvent event) {
-                colorselector.setColor("white");
-            }
-        });
-        main.addComponent(button);
+//        final Button button = new Button("Set to white");
+//        final Button testButton = new Button("This is a test");
+//        button.addListener(new Button.ClickListener() {
+//            public void buttonClick(ClickEvent event) {
+//                colorselector.setColor("white");
+//            }
+//        });
+        //main.addComponent(button);
+//        main.addComponent(testButton);
         
         setTheme("mytheme");
     }
