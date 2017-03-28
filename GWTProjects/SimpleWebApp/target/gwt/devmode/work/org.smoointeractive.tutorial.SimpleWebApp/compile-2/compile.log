@@ -1,0 +1,13 @@
+binding: user.agent=gecko1_8
+Compiling module org.smoointeractive.tutorial.SimpleWebApp
+   Unification traversed 1005 fields and methods and 590 types. 9 are considered part of the current module and 14 had all of their fields and methods traversed.
+   Compiling 1 permutation
+      Compiling permutation 0...
+      Linking per-type JS with 9 new/changed types.
+      Source Maps Enabled
+   Compile of permutations succeeded
+   Compilation succeeded -- 2.931s
+Linking into /Users/sachamoo/Projects/GWTProjects/SimpleWebApp/target/gwt/devmode/work/org.smoointeractive.tutorial.SimpleWebApp/compile-2/war/simplewebapp; Writing extras to /Users/sachamoo/Projects/GWTProjects/SimpleWebApp/target/gwt/devmode/work/org.smoointeractive.tutorial.SimpleWebApp/compile-2/extras/simplewebapp
+   Link succeeded
+   Linking succeeded -- 0.274s
+3.719s total -- Compile completed

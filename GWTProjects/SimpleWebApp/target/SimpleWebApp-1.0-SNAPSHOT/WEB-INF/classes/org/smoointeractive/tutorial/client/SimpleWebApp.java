@@ -16,6 +16,9 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.dom.client.Document;
+
+//import com.google.gwt.uibinder.
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -83,6 +86,13 @@ public class SimpleWebApp implements EntryPoint {
         sendButton.setFocus(true);
       }
     });
+
+      // testing uibinder test class
+      HelloWorld helloWorld = new HelloWorld("able", "foxtrot", "zebra");
+    RootPanel.get().add(helloWorld);
+//    RootPanel.get("nameFieldContainer").add(helloWorld);
+//      Document.get().getBody().appendChild(helloWorld.getElement());
+//      helloWorld.setName("World");
 
     // Create a handler for the sendButton and nameField
     class MyHandler implements ClickHandler, KeyUpHandler {

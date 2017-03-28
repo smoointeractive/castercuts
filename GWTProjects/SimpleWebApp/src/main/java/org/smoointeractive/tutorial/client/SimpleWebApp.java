@@ -88,9 +88,11 @@ public class SimpleWebApp implements EntryPoint {
     });
 
       // testing uibinder test class
-      HelloWorld helloWorld = new HelloWorld();
-      Document.get().getBody().appendChild(helloWorld.getElement());
-      helloWorld.setName("World");
+      HelloWorld helloWorld = new HelloWorld("able", "foxtrot", "zebra");
+    RootPanel.get().add(helloWorld);
+//    RootPanel.get("nameFieldContainer").add(helloWorld);
+//      Document.get().getBody().appendChild(helloWorld.getElement());
+//      helloWorld.setName("World");
 
     // Create a handler for the sendButton and nameField
     class MyHandler implements ClickHandler, KeyUpHandler {
