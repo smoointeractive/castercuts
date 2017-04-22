@@ -18,6 +18,9 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 import com.smoointeractive.project.widget.SimpleGrid;
 import com.vaadin.polymer.paper.widget.PaperButton;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
@@ -38,9 +41,22 @@ public class GalleryTwo implements EntryPoint {
   /**
    * This is the entry point method.
    */
+
+  private ArrayList<String> testList = new ArrayList<String>(Arrays.asList(
+          "One", "Two", "Three",
+          "Four", "Five", "Six",
+          "Seven", "Eight", "Nine",
+          "Ten", "Eleven", "Twelve",
+          "Thirteen", "Fourteen", "Fifteen",
+          "Sixteen", "Seventeen", "Eighteen",
+          "Nineteen", "Twenty", "TwentyOne",
+          "TwentyTwo", "TwentyThree", "TwentyFour",
+          "TwentyFive","TwentySix", "TwentySeven",
+          "TwentyEight","TwentyNine","Thirty"));
+
   public void onModuleLoad() {
 //   PaperButton button = new PaperButton("Hello Click Me!");
-      SimpleGrid simpleGrid = new SimpleGrid();
+      SimpleGrid simpleGrid = new SimpleGrid(testList);
 
     RootPanel.get().add(simpleGrid);
   }
