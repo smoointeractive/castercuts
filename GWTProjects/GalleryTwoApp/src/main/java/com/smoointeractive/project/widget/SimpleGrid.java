@@ -9,6 +9,7 @@ import com.google.gwt.dom.client.Style;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
@@ -45,15 +46,17 @@ public class SimpleGrid extends Composite {
                                                            new Contact("Richard"));
     private int rowCount = 0;
     private VerticalPanel verticalPanel = new VerticalPanel();
+    private ArrayList<String> dataSource;
 
-
-    public SimpleGrid(ArrayList<String> list) {
-        // initialize this widget
+    @UiConstructor
+    public SimpleGrid()
+    {
+        setDataSource(new ArrayList<>());
         initWidget(simpleGridUiBinder.createAndBindUi(this));
 
         HorizontalPanel horizontalPanel = new HorizontalPanel();
 
-        for(int i=0; i < list.size(); i++)
+        for(int i=0; i < dataSource.size(); i++)
         {
             if((i % 9) == 0)
             {
@@ -67,6 +70,36 @@ public class SimpleGrid extends Composite {
 
         HTMLPanel currentHTMLPanel = (HTMLPanel)this.getWidget();
         currentHTMLPanel.add(verticalPanel);
+    }
+
+
+    public SimpleGrid(ArrayList<String> list) {
+        setDataSource(list);
+
+        // initialize this widget
+        initWidget(simpleGridUiBinder.createAndBindUi(this));
+
+        HorizontalPanel horizontalPanel = new HorizontalPanel();
+
+        for(int i=0; i < dataSource.size(); i++)
+        {
+            if((i % 9) == 0)
+            {
+                horizontalPanel = new HorizontalPanel();
+                horizontalPanel.setSpacing(5);
+                verticalPanel.add(horizontalPanel);
+            }
+
+            horizontalPanel.add(new Button("<img src='01.jpg' width='100'></img>"));
+        }
+
+        HTMLPanel currentHTMLPanel = (HTMLPanel)this.getWidget();
+        currentHTMLPanel.add(verticalPanel);
+    }
+
+    public void setDataSource(ArrayList<String> list)
+    {
+        dataSource = list;
     }
 
     public void setRowCount(int value)
