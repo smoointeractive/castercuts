@@ -15,6 +15,7 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.smoointeractive.project.widget.CustomImageTable;
 import com.smoointeractive.project.widget.SimpleGrid;
 import com.vaadin.polymer.paper.widget.PaperButton;
 
@@ -56,8 +57,10 @@ public class GalleryTwo implements EntryPoint {
 
   public void onModuleLoad() {
 //   PaperButton button = new PaperButton("Hello Click Me!");
-      SimpleGrid simpleGrid = new SimpleGrid(testList);
+    SimpleGrid simpleGrid = new SimpleGrid(testList);
+    CustomImageTable table = new CustomImageTable();
 
     RootPanel.get().add(simpleGrid);
+    RootPanel.get().add(table);
   }
 }
