@@ -6,6 +6,7 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.Column;
 import com.google.gwt.user.cellview.client.TextColumn;
@@ -25,7 +26,7 @@ public class CustomImageTable extends Composite {
 
     }
 
-    public static CustomImageTableUiBinder customImageTableUiBinder = GWT.create(CustomImageTableUiBinder.class);
+    private static CustomImageTableUiBinder customImageTableUiBinder = GWT.create(CustomImageTableUiBinder.class);
 
 //    private ResourceBundle resources = GWT.create(ResourceBundle.class);
     private static List<Contact> CONTACTS = Arrays.asList(new Contact("Michael"),
@@ -33,7 +34,7 @@ public class CustomImageTable extends Composite {
             new Contact("Kim"),
             new Contact("Richard"));
 
-
+    @UiConstructor
     public CustomImageTable()
     {
         initWidget(customImageTableUiBinder.createAndBindUi(this));
@@ -56,7 +57,7 @@ public class CustomImageTable extends Composite {
             public void render(Context context, String value, SafeHtmlBuilder safeHtmlBuilder) {
                 super.render(context, value, safeHtmlBuilder);
                 String imagePath = "01.jpg";
-                safeHtmlBuilder.appendHtmlConstant("<img width=\"70\" src=" + imagePath + ">");
+                safeHtmlBuilder.appendHtmlConstant("<img src = '"+imagePath+"' width = '70px' />");
             }
         };
 

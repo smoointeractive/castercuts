@@ -2,34 +2,40 @@ package com.smoointeractive.project.widget;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiChild;
 import com.google.gwt.uibinder.client.UiFactory;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.user.client.ui.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  * Created by sachamoo on 4/24/17.
  */
-public class Main extends Composite {
-    interface MainUiBinder extends UiBinder<HTMLPanel, Main> {
+public class Main extends Composite implements HasWidgets{
+    interface MainUiBinder extends UiBinder<Widget, Main> {
 
     }
+    private static MainUiBinder mainUiBinder = GWT.create(MainUiBinder.class);
 
-    public static MainUiBinder mainUiBinder = GWT.create(MainUiBinder.class);
+    private List<String> testList = Arrays.asList("1", "2", "3");
 
-    private ArrayList<String> testList = (ArrayList<String>) Arrays.asList(  "One", "Two", "Three", "Four",
-                                                    "Five", "Six", "Seven", "Eight",
-                                                    "Nine", "Ten", "Eleven", "Twelve",
-                                                    "Thirteen", "Fourteen", "Fifteen", "Sixteen",
-                                                    "Seventeen", "Eighteen", "Nineteen", "Twenty");
-
+    @UiField
+    HTMLPanel mainPanel;
 
     public Main()
     {
         initWidget(mainUiBinder.createAndBindUi(this));
+    }
+
+    @UiChild
+    public void addMyContent(Widget widget) {
+
+        HTMLPanel currentHTMLPanel = (HTMLPanel)this.getWidget();
+        currentHTMLPanel.add(widget);
     }
 
 
@@ -38,5 +44,25 @@ public class Main extends Composite {
     public SimpleGrid MakeSimpleGrid()
     {
         return new SimpleGrid(testList);
+    }
+
+    @Override
+    public void add(Widget w) {
+        mainPanel.add(w);
+    }
+
+    @Override
+    public void clear() {
+        mainPanel.clear();
+    }
+
+    @Override
+    public Iterator<Widget> iterator() {
+        return mainPanel.iterator();
+    }
+
+    @Override
+    public boolean remove(Widget w) {
+        return mainPanel.remove(w);
     }
 }
