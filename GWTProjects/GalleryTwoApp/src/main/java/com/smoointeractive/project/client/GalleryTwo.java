@@ -4,6 +4,7 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.smoointeractive.project.widget.CustomImageTable;
 import com.smoointeractive.project.widget.Main;
+import com.smoointeractive.project.widget.SimpleGrid;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,13 +32,13 @@ public class GalleryTwo implements EntryPoint {
 
   public void onModuleLoad() {
 //   PaperButton button = new PaperButton("Hello Click Me!");
-//    SimpleGrid simpleGrid = new SimpleGrid(testList);
+//    SimpleGrid simpleGrid = new SimpleGrid((ArrayList<String>) Arrays.asList("One", "Two", "Three"));
     CustomImageTable table = new CustomImageTable();
 //
 //    RootPanel.get().add(simpleGrid);
-//    RootPanel.get().add(table);
-    Main main = new Main();
+    RootPanel.get().add(table);
+//    Main main = new Main();
 
-    RootPanel.get().add(main);
+//    RootPanel.get().add(main);
   }
 }

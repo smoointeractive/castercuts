@@ -60,9 +60,11 @@ public class SimpleGrid extends Composite {
         // initialize this widget
         initWidget(simpleGridUiBinder.createAndBindUi(this));
 
+        List<String> tmp = Arrays.asList("1","2","3","4","5","6","7","8","8","19");
+
         HorizontalPanel horizontalPanel = new HorizontalPanel();
 
-        for(int i=0; i < dataSource.size(); i++)
+        for(int i=0; i < tmp.size(); i++)
         {
             if((i % 9) == 0)
             {
@@ -71,11 +73,12 @@ public class SimpleGrid extends Composite {
                 verticalPanel.add(horizontalPanel);
             }
 
-            horizontalPanel.add(new Button("<img src='images/01.jpg' width='100'></img>"));
+            horizontalPanel.add(new Button("<img src='01.jpg' width='100'></img>"));
         }
 
         HTMLPanel currentHTMLPanel = (HTMLPanel)this.getWidget();
-        currentHTMLPanel.add(verticalPanel);
+        currentHTMLPanel.add(new Label("help"));
+//        currentHTMLPanel.add(verticalPanel);
     }
 
     public void setDataSource(ArrayList<String> list)

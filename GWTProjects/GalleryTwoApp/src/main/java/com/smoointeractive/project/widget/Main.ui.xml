@@ -1,6 +1,8 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
-             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:w='urn:import:com.smoointeractive.project.widget'>
     <g:HTMLPanel>
-
+        <w:SimpleGrid/>
+        <!--<w:CustomImageTable/>-->
     </g:HTMLPanel>
 </ui:UiBinder>
