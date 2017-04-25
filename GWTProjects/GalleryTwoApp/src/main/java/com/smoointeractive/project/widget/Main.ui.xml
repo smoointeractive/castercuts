@@ -3,6 +3,6 @@
              xmlns:w='urn:import:com.smoointeractive.project.widget'>
     <g:HTMLPanel ui:field="mainPanel">
         <w:SimpleGrid/>
-        <w:CustomImageTable/>
+        <!--<w:CustomImageTable/>-->
     </g:HTMLPanel>
 </ui:UiBinder>

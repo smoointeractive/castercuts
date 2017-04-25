@@ -39,33 +39,12 @@ public class GalleryTwo implements EntryPoint {
 //
 //    RootPanel.get().add(simpleGrid);
 //    RootPanel.get().add(table);
-    Main main = new Main();
 
-    RootPanel.get().add(main);
-
-    dataService.LoadData(new AsyncCallback<String>() {
-      @Override
-      public void onFailure(Throwable caught) {
-        com.google.gwt.core.client.GWT.log("LoadData: Failure trying to receive data from database");
-//        System.out.println("Failure trying to receive data from database");
-      }
-
-      @Override
-      public void onSuccess(String result) {
-//        System.out.println("---------------------- " + result);
-        com.google.gwt.core.client.GWT.log("---------------------- " + result);
-
-//        TextBox messageLabel = new TextBox();
-//        RootPanel.get().add(messageLabel);
-//
-//        loadTest(messageLabel);
-      }
-    });
-
-
+    InitializeData();
+    com.google.gwt.core.client.GWT.log("EntryPoint imagesList: " + ((imagesList!=null)?"valid":"invalid"));
   }
 
-  private void loadTest(TextBox label)
+  private void intializeDataSource(TextBox label)
   {
     // get data
     dataService.GetData(new AsyncCallback<ArrayList<ImageGalleryDataModel>>() {
@@ -81,12 +60,21 @@ public class GalleryTwo implements EntryPoint {
 
         imagesList = result;
 
-        // grab image found in the first data object
+        com.google.gwt.core.client.GWT.log("intializeDataSource result: " + ((result!=null)?"valid":"invalid"));
+        com.google.gwt.core.client.GWT.log("intializeDataSource imagesList: " + ((imagesList!=null)?"valid":"invalid"));
+
+        // grab image found in the first data object -- for testing
         ImageGalleryDataModel firstElement = imagesList.get(0);
 
-        Image img = new Image(imagesList.get(0).getPhoto());
+//        Image img = new Image(imagesList.get(0).getPhoto());
+//
+//        RootPanel.get().add(img);
 
-        RootPanel.get().add(img);
+        // since acquiring data is an asynchronous process, initializing Main here guaratees that data is ready
+        // to be passed on to main
+        Main main = new Main(imagesList);
+
+        RootPanel.get().add(main);
 
 //          image.setUrl(firstElement.getPhoto());
         // add label to notify the user that the image should have been loaded
@@ -97,4 +85,25 @@ public class GalleryTwo implements EntryPoint {
     });
   }
 
+  private void InitializeData()
+  {
+    dataService.LoadData(new AsyncCallback<String>() {
+      @Override
+      public void onFailure(Throwable caught) {
+        com.google.gwt.core.client.GWT.log("LoadData: Failure trying to receive data from database");
+//        System.out.println("Failure trying to receive data from database");
+      }
+
+      @Override
+      public void onSuccess(String result) {
+//        System.out.println("---------------------- " + result);
+        com.google.gwt.core.client.GWT.log("---------------------- " + result);
+
+        TextBox messageLabel = new TextBox();
+        RootPanel.get().add(messageLabel);
+
+        intializeDataSource(messageLabel);
+      }
+    });
+  }
 }

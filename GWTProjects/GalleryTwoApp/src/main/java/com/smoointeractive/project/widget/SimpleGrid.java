@@ -7,6 +7,7 @@ import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.user.client.ui.*;
 import com.smoointeractive.project.resources.ResourceBundle;
 import com.smoointeractive.project.shared.Contact;
+import com.smoointeractive.project.shared.ImageGalleryDataModel;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,77 +20,61 @@ import java.util.List;
 
 
 public class SimpleGrid extends Composite {
+
     interface SimpleGridUiBinder extends UiBinder<HTMLPanel, SimpleGrid> {
 
     }
-
     private static SimpleGridUiBinder simpleGridUiBinder = GWT.create(SimpleGridUiBinder.class);
-    private ResourceBundle resources = GWT.create(ResourceBundle.class);
 
+    private ResourceBundle resources = GWT.create(ResourceBundle.class);
     private int rowCount = 0;
+    private int spacing = 20;
     private VerticalPanel verticalPanel = new VerticalPanel();
-    private List<String> dataSource;
+    private ArrayList<ImageGalleryDataModel> dataSource;
 
 
     public SimpleGrid()
     {
-        setDataSource(Arrays.asList("1", "2", "3",
-                                    "4", "5", "6",
-                                    "4", "5", "6",
-                                    "4", "5", "6",
-                                    "4", "5", "6",
-                                    "4", "5", "6",
-                                    "4", "5", "6",
-                "7"));
+        setDataSource(new ArrayList<>());
+
         initWidget(simpleGridUiBinder.createAndBindUi(this));
 
-        HorizontalPanel horizontalPanel = new HorizontalPanel();
-
-        for(int i=0; i < dataSource.size(); i++)
-        {
-            if((i % 9) == 0)
-            {
-                horizontalPanel = new HorizontalPanel();
-                horizontalPanel.setSpacing(5);
-                verticalPanel.add(horizontalPanel);
-            }
-
-            horizontalPanel.add(new Button("<img src='01.jpg' width='100'></img>"));
-//            horizontalPanel.add(new Button("Hello"));
-        }
-
-        HTMLPanel currentHTMLPanel = (HTMLPanel)this.getWidget();
-        currentHTMLPanel.add(verticalPanel);
+        InitializeGrid();
     }
 
     @UiConstructor
-    public SimpleGrid(List<String> list) {
+    public SimpleGrid(ArrayList<ImageGalleryDataModel> list, int rowCount) {
         setDataSource(list);
+        setRowCount(rowCount);
+        InitializeGrid();
+    }
 
+    private void InitializeGrid() {
         // initialize this widget
         initWidget(simpleGridUiBinder.createAndBindUi(this));
 
-//        List<String> tmp = Arrays.asList("1","2","3","4","5","6","7","8","8","19");
+        GWT.log("SimpleGrid datasource: " +
+                                          ((dataSource!=null)?"valid":"invalid"));
+        if(null != dataSource) {
+            HorizontalPanel horizontalPanel = new HorizontalPanel();
 
-        HorizontalPanel horizontalPanel = new HorizontalPanel();
+            for (int i = 0; i < dataSource.size(); i++) {
+                if ((i % rowCount) == 0) {
+                    horizontalPanel = new HorizontalPanel();
+                    horizontalPanel.setSpacing(spacing);
+                    verticalPanel.add(horizontalPanel);
+                }
 
-        for(int i=0; i < dataSource.size(); i++)
-        {
-            if((i % 9) == 0)
-            {
-                horizontalPanel = new HorizontalPanel();
-                horizontalPanel.setSpacing(5);
-                verticalPanel.add(horizontalPanel);
+                horizontalPanel.add(new Button("<img src='" +
+                                                dataSource.get(i).getPhoto() +"' width='150'></img>"));
             }
 
-            horizontalPanel.add(new Button("<img src='01.jpg' width='100'></img>"));
+            HTMLPanel currentHTMLPanel = (HTMLPanel) this.getWidget();
+            currentHTMLPanel.add(verticalPanel);
         }
-
-        HTMLPanel currentHTMLPanel = (HTMLPanel)this.getWidget();
-        currentHTMLPanel.add(verticalPanel);
     }
 
-    public void setDataSource(List<String> list)
+    public void setDataSource(ArrayList<ImageGalleryDataModel> list)
     {
         dataSource = list;
     }
