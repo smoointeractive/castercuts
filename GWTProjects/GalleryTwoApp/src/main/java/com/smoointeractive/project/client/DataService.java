@@ -11,6 +11,6 @@ import java.util.ArrayList;
  */
 @RemoteServiceRelativePath("getdata")
 public interface DataService extends RemoteService {
-    String LoadData() throws IllegalArgumentException;
-    ArrayList<ImageGalleryDataModel> GetData() throws IllegalArgumentException;
+    String LoadData();
+    ArrayList<ImageGalleryDataModel> GetData();
 }

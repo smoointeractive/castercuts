@@ -1,9 +1,11 @@
 package com.smoointeractive.project.shared;
 
+import java.io.Serializable;
+
 /**
  * Created by sachamoo on 4/24/17.
  */
-public class ImageGalleryDataModel {
+public class ImageGalleryDataModel implements Serializable{
     private int id;
     private String name;
     private String description;

@@ -9,6 +9,6 @@ import java.util.ArrayList;
  * Created by sachamoo on 4/19/17.
  */
 public interface DataServiceAsync {
-    void LoadData(AsyncCallback<String> callback) throws IllegalArgumentException;
-    void GetData(AsyncCallback<ArrayList<ImageGalleryDataModel>> callback) throws IllegalArgumentException;
+    void LoadData(AsyncCallback<String> callback);
+    void GetData(AsyncCallback<ArrayList<ImageGalleryDataModel>> callback);
 }
