@@ -21,7 +21,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SimpleGrid.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SimpleGrid.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/SimpleGrid.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="201">
@@ -53,28 +53,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.ui.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.ui.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.ui.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+            <state relative-caret-position="225">
+              <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/server/DatabaseConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-525">
-              <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#422#423#0" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-                <element signature="e#3506#3507#0" expanded="true" />
-                <element signature="e#3545#3546#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -82,8 +66,28 @@
       <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
+            <state relative-caret-position="225">
               <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GalleryTwo.gwt.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/GalleryTwo.gwt.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="23" column="70" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GalleryTwo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/GalleryTwo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -92,16 +96,16 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+            <state relative-caret-position="104">
+              <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1450#1451#0" expanded="true" />
-                <element signature="e#1503#1504#0" expanded="true" />
-                <element signature="e#1712#1713#0" expanded="true" />
-                <element signature="e#1755#1756#0" expanded="true" />
-                <element signature="e#1922#1923#0" expanded="true" />
-                <element signature="e#1954#1955#0" expanded="true" />
+                <element signature="e#2148#2149#0" expanded="true" />
+                <element signature="e#2201#2202#0" expanded="true" />
+                <element signature="e#2410#2411#0" expanded="true" />
+                <element signature="e#2453#2454#0" expanded="true" />
+                <element signature="e#2620#2621#0" expanded="true" />
+                <element signature="e#2652#2653#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,21 +127,11 @@
       <file leaf-file-name="GalleryTwo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/client/GalleryTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-283">
-              <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="42" />
+            <state relative-caret-position="332">
+              <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/client/DataService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -182,10 +176,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/shared/ImageGalleryDataModel.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/server/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/SimpleGrid.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/client/GalleryTwo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.ui.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/SimpleGrid.java" />
       </list>
     </option>
   </component>
@@ -913,7 +907,7 @@
         <state relative-caret-position="240">
           <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
           <folding>
-            <element signature="e#1850#1851#0" expanded="true" />
+            <element signature="e#2548#2549#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -990,14 +984,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/GalleryTwo-1.0-SNAPSHOT/GalleryTwo.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/GalleryTwo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/GalleryTwo.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1081,22 +1067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/GalleryTwo.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/client/DataService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1146,40 +1116,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1503#1504#0" expanded="true" />
-            <element signature="e#1712#1713#0" expanded="true" />
-            <element signature="e#1755#1756#0" expanded="true" />
-            <element signature="e#1922#1923#0" expanded="true" />
-            <element signature="e#1954#1955#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.ui.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/client/GalleryTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-283">
-          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/SimpleGrid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -1187,6 +1123,64 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2148#2149#0" expanded="true" />
+            <element signature="e#2201#2202#0" expanded="true" />
+            <element signature="e#2410#2411#0" expanded="true" />
+            <element signature="e#2453#2454#0" expanded="true" />
+            <element signature="e#2620#2621#0" expanded="true" />
+            <element signature="e#2652#2653#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/client/GalleryTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/GalleryTwo.gwt.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="23" column="70" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/GalleryTwo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.ui.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>

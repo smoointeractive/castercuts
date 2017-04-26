@@ -2,13 +2,19 @@ package com.smoointeractive.project.widget;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.*;
-import com.google.gwt.user.client.ui.*;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.HasWidgets;
+import com.google.gwt.user.client.ui.Widget;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
+import com.vaadin.polymer.iron.widget.IronPages;
+import com.vaadin.polymer.paper.widget.PaperTab;
+import com.vaadin.polymer.paper.widget.PaperTabs;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
+
+//import com.vaadin.polymer.paper.widget.
 
 /**
  * Created by sachamoo on 4/24/17.
@@ -29,6 +35,16 @@ public class Main extends Composite implements HasWidgets{
     HTMLPanel mainPanel;
     @UiField
     SimpleGrid imageGrid;
+    @UiField
+    IronPages pages;
+    @UiField
+    PaperTab tab1;
+    @UiField
+    PaperTab tab2;
+    @UiField
+    PaperTab tab3;
+    @UiField
+    PaperTab tab4;
 
     @UiConstructor
     public Main()
@@ -41,6 +57,11 @@ public class Main extends Composite implements HasWidgets{
         this.data = data;
         com.google.gwt.core.client.GWT.log("EntryPoint data: " + ((data!=null)?"valid":"invalid"));
         initWidget(mainUiBinder.createAndBindUi(this));
+
+        tab1.addClickHandler(event -> pages.selectNext());
+        tab2.addClickHandler(event -> pages.selectIndex(1));
+        tab3.addClickHandler(event -> pages.selectIndex(2));
+        tab4.addClickHandler(event -> pages.selectIndex(3));
     }
 
     @UiChild

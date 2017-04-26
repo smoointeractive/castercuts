@@ -100,7 +100,7 @@ public class GalleryTwo implements EntryPoint {
         com.google.gwt.core.client.GWT.log("---------------------- " + result);
 
         TextBox messageLabel = new TextBox();
-        RootPanel.get().add(messageLabel);
+//        RootPanel.get().add(messageLabel);
 
         intializeDataSource(messageLabel);
       }
