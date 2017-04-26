@@ -2,6 +2,10 @@ package com.smoointeractive.project.widget;
 
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.safehtml.shared.SafeUri;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.user.client.ui.*;
@@ -12,6 +16,7 @@ import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Pattern;
 
 
 /**
@@ -26,11 +31,13 @@ public class SimpleGrid extends Composite {
     }
     private static SimpleGridUiBinder simpleGridUiBinder = GWT.create(SimpleGridUiBinder.class);
 
-    private ResourceBundle resources = GWT.create(ResourceBundle.class);
+//    private ResourceBundle resources = GWT.create(ResourceBundle.class);
     private int rowCount = 0;
     private int spacing = 20;
     private VerticalPanel verticalPanel = new VerticalPanel();
     private ArrayList<ImageGalleryDataModel> dataSource;
+    private Button selectedButton;
+    private DialogBox imageDialogBox;
 
 
     public SimpleGrid()
@@ -53,6 +60,8 @@ public class SimpleGrid extends Composite {
         // initialize this widget
         initWidget(simpleGridUiBinder.createAndBindUi(this));
 
+        imageDialogBox = new DialogBox();
+
         GWT.log("SimpleGrid datasource: " +
                                           ((dataSource!=null)?"valid":"invalid"));
         if(null != dataSource) {
@@ -64,9 +73,16 @@ public class SimpleGrid extends Composite {
                     horizontalPanel.setSpacing(spacing);
                     verticalPanel.add(horizontalPanel);
                 }
-
-                horizontalPanel.add(new Button("<img src='" +
-                                                dataSource.get(i).getPhoto() +"' width='150'></img>"));
+                Button thumbnailButton = new Button("<img src='" +
+                        dataSource.get(i).getPhoto() +"' width='150'></img>");
+                thumbnailButton.addClickHandler(new ClickHandler() {
+                    @Override
+                    public void onClick(ClickEvent event) {
+                        selectedButton = (Button)event.getSource();
+                        launchDialogBox(selectedButton.getHTML());
+                    }
+                });
+                horizontalPanel.add(thumbnailButton);
             }
 
             HTMLPanel currentHTMLPanel = (HTMLPanel) this.getWidget();
@@ -82,5 +98,29 @@ public class SimpleGrid extends Composite {
     public void setRowCount(int value)
     {
         rowCount = value;
+    }
+
+    private void launchDialogBox(String html)
+    {
+        com.google.gwt.core.client.GWT.log(html.split("\"")[1].toString());
+
+        String base64String = html.split("\"")[1];
+        Image image = new Image(base64String);
+//        image.setUrl(base64String);
+//        Button btn = new Button("x");
+//        btn.addClickHandler(event -> imageDialogBox.hide());
+
+//        VerticalPanel verticalPanel = new VerticalPanel();
+//        verticalPanel.add(btn);
+//        verticalPanel.add(image);
+
+        imageDialogBox.setText( "you clicked this image");
+        imageDialogBox.setAnimationEnabled(true);
+        imageDialogBox.setGlassEnabled(true);
+        imageDialogBox.setAutoHideEnabled(true);
+//        imageDialogBox.setWidget(widget);
+        imageDialogBox.setWidget(image);
+        imageDialogBox.center();
+        imageDialogBox.show();
     }
 }

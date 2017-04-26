@@ -27,6 +27,8 @@ public class Main extends Composite implements HasWidgets{
 
     @UiField
     HTMLPanel mainPanel;
+    @UiField
+    SimpleGrid imageGrid;
 
     @UiConstructor
     public Main()

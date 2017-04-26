@@ -2,7 +2,7 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:w='urn:import:com.smoointeractive.project.widget'>
     <g:HTMLPanel ui:field="mainPanel">
-        <w:SimpleGrid/>
+        <w:SimpleGrid ui:field="imageGrid"/>
         <!--<w:CustomImageTable/>-->
     </g:HTMLPanel>
 </ui:UiBinder>
