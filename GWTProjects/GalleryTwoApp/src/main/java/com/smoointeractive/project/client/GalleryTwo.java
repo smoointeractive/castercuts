@@ -6,8 +6,14 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.*;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import com.smoointeractive.project.widget.Main;
+import com.vaadin.polymer.Polymer;
+import com.vaadin.polymer.elemental.Function;
+import com.vaadin.polymer.iron.IronIconElement;
+import com.vaadin.polymer.paper.PaperIconItemElement;
 
+import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -40,6 +46,22 @@ public class GalleryTwo implements EntryPoint {
 //    RootPanel.get().add(simpleGrid);
 //    RootPanel.get().add(table);
 
+    // We have to load icon set before application runs
+    // importHref expects the following
+    //        param1: list
+    //        parem2: Function instance
+    Polymer.importHref(Arrays.asList(
+            PaperIconItemElement.SRC,
+            IronIconElement.SRC,
+            "iron-icons"),
+            o -> {
+              // app is executed when all imports succeed
+              initiateApplication();
+              return null;
+            });
+  }
+
+  private void initiateApplication() {
     InitializeData();
     com.google.gwt.core.client.GWT.log("EntryPoint imagesList: " + ((imagesList!=null)?"valid":"invalid"));
   }

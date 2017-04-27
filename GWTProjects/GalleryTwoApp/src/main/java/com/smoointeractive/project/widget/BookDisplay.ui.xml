@@ -3,19 +3,38 @@
              xmlns:p='urn:import:com.vaadin.polymer.paper.widget'
              xmlns:i='urn:import:com.vaadin.polymer.iron.widget'>
     <g:HTMLPanel>
-        <p:PaperCard ui:field="book">
+        <style is="custom-style">
+            .page-navigation{
+            font-size: 110%;
+            inline-block;
+            inline;
+            text-align: center;
+            }
+            .paper-card-style /deep/ img {
+            justify-content: center;
+            max-width: 60%; /* You can use different numbers for max-width and max-height! */
+            max-height: 55%;
+            width: auto;
+            height: auto;
+            }
+        </style>
+        <p:PaperCard ui:field="book" addStyleNames="paper-card-style">
+            <!--<p:PaperIconButton toggles="true" icon="alarm">active</p:PaperIconButton>-->
         <div class="page-description">
         <g:HTML>Hello this is a test!</g:HTML>
         </div>
         <div class="page-navigation">
-        <span> previous </span>
-        <div class="page-navigation-left">
-        <i:IronIcon icon="communication:location-on"></i:IronIcon>
-        </div>
-        <span> next </span>
-        <div class="page-navigation-right">
-        <i:IronIcon icon="communication:location-on"></i:IronIcon>
-        </div>
+            <div>
+                <span>previous</span>
+                <p:PaperIconButton ui:field="backButton" icon="arrow-back"/>
+                <g:RichTextArea ui:field="textArea"/>
+                <span style='margin-right:1em;'></span>
+                <span>next</span>
+                <p:PaperIconButton ui:field="forwardButton" icon="arrow-forward"/>
+                <!--<span style='margin-right:3em;'>next</span>-->
+                <!--<span style='margin-left:35em;'>next</span>-->
+            <!--<i:IronIcon icon="icons:arrow-forward"/>-->
+            </div>
         </div>
         </p:PaperCard>
     </g:HTMLPanel>

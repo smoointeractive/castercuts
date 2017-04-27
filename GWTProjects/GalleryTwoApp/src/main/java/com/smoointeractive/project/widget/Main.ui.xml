@@ -60,6 +60,7 @@
             <div><w:BookDisplay/></div>
             <div>Four</div>
         </i:IronPages>
+
         <!--<w:YamBook ui:field="dummyBook" />-->
 
         <!--<w:CustomImageTable/>-->

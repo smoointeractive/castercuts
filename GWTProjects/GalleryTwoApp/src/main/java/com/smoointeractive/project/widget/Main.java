@@ -2,6 +2,7 @@ package com.smoointeractive.project.widget;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.*;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import com.vaadin.polymer.iron.widget.IronPages;
@@ -57,7 +58,7 @@ public class Main extends Composite implements HasWidgets{
         com.google.gwt.core.client.GWT.log("EntryPoint data: " + ((data!=null)?"valid":"invalid"));
         initWidget(mainUiBinder.createAndBindUi(this));
 
-        tab1.addClickHandler(event -> pages.selectNext());
+        tab1.addClickHandler(event -> pages.selectIndex(0));
         tab2.addClickHandler(event -> pages.selectIndex(1));
         tab3.addClickHandler(event -> pages.selectIndex(2));
         tab4.addClickHandler(event -> pages.selectIndex(3));
@@ -100,5 +101,15 @@ public class Main extends Composite implements HasWidgets{
 
     public void SetDataSource(ArrayList<ImageGalleryDataModel> data) {
         this.data = data;
+    }
+
+    // get dimension information when object is loaded
+    @Override
+    protected void onLoad()
+    {
+        // Note: use the "RootPanel.get().getOffsetWidth" or "RootPanel.get().getOffsetHeight" to get the parent
+        // pixel dimensions. Using getOffsetWidth | getOffsetHeight return 0 value.
+        com.google.gwt.core.client.GWT.log(String.valueOf(RootPanel.get().getOffsetWidth()));
+        com.google.gwt.core.client.GWT.log(String.valueOf(Window.getClientWidth()));
     }
 }
