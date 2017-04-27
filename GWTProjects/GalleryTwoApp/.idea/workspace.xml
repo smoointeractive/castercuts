@@ -21,11 +21,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SimpleGrid.ui.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/SimpleGrid.ui.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="64" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="SimpleGrid.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/SimpleGrid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
+            <state relative-caret-position="578">
               <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.ui.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.ui.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomImageTable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/CustomImageTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="855">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,58 +68,8 @@
       <file leaf-file-name="CustomImageTable.ui.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/CustomImageTable.ui.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomImageTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/CustomImageTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-376">
-              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.ui.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.ui.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GalleryTwo.gwt.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/GalleryTwo.gwt.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="23" column="70" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GalleryTwo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/GalleryTwo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -96,42 +78,41 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+            <state relative-caret-position="374">
+              <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2148#2149#0" expanded="true" />
-                <element signature="e#2201#2202#0" expanded="true" />
-                <element signature="e#2410#2411#0" expanded="true" />
-                <element signature="e#2453#2454#0" expanded="true" />
-                <element signature="e#2620#2621#0" expanded="true" />
-                <element signature="e#2652#2653#0" expanded="true" />
+                <element signature="e#2038#2039#0" expanded="true" />
+                <element signature="e#2091#2092#0" expanded="true" />
+                <element signature="e#2300#2301#0" expanded="true" />
+                <element signature="e#2343#2344#0" expanded="true" />
+                <element signature="e#2510#2511#0" expanded="true" />
+                <element signature="e#2542#2543#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/server/DataServiceImpl.java">
+      <file leaf-file-name="BookDisplay.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+            <state relative-caret-position="255">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="22" />
               <folding>
-                <element signature="e#739#740#0" expanded="true" />
-                <element signature="e#802#803#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#504#505#0" expanded="true" />
+                <element signature="e#566#567#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GalleryTwo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/client/GalleryTwo.java">
+      <file leaf-file-name="BookDisplay.ui.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.ui.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -168,7 +149,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/resources/ResourceBundle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/CustomImageTable.ui.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/CustomImageCell.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/CustomImageTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/SimpleGrid.ui.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/client/DataServiceAsync.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/client/DataService.java" />
@@ -177,8 +157,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/server/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/SimpleGrid.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/client/GalleryTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/CustomImageTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Test.ui.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/DummyBook.ui.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/DummyBook.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/YamBook.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.ui.xml" />
       </list>
     </option>
@@ -907,7 +893,7 @@
         <state relative-caret-position="240">
           <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
           <folding>
-            <element signature="e#2548#2549#0" expanded="true" />
+            <element signature="e#2438#2439#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1038,14 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/SimpleGrid.ui.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/shared/ImageGalleryDataModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1080,11 +1058,11 @@
         <state relative-caret-position="-525">
           <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#3506#3507#0" expanded="true" />
-            <element signature="e#3545#3546#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#422#423#0" expanded="false" />
+            <element signature="e#474#475#0" expanded="false" />
+            <element signature="e#3506#3507#0" expanded="false" />
+            <element signature="e#3545#3546#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1096,48 +1074,6 @@
           <folding>
             <element signature="e#739#740#0" expanded="true" />
             <element signature="e#802#803#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/CustomImageTable.ui.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/CustomImageTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-376">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/SimpleGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2148#2149#0" expanded="true" />
-            <element signature="e#2201#2202#0" expanded="true" />
-            <element signature="e#2410#2411#0" expanded="true" />
-            <element signature="e#2453#2454#0" expanded="true" />
-            <element signature="e#2620#2621#0" expanded="true" />
-            <element signature="e#2652#2653#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1176,10 +1112,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/SimpleGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/SimpleGrid.ui.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="64" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/CustomImageTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2038#2039#0" expanded="true" />
+            <element signature="e#2091#2092#0" expanded="true" />
+            <element signature="e#2300#2301#0" expanded="true" />
+            <element signature="e#2343#2344#0" expanded="true" />
+            <element signature="e#2510#2511#0" expanded="true" />
+            <element signature="e#2542#2543#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/CustomImageTable.ui.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/YamBook.ui.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/YamBook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.ui.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.ui.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
+        <state relative-caret-position="374">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
           <folding />
         </state>
       </provider>

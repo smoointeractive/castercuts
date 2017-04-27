@@ -57,10 +57,10 @@
         <i:IronPages ui:field="pages" selected="0">
             <div>One</div>
             <div><w:SimpleGrid ui:field="imageGrid"/></div>
-            <div>Three</div>
+            <div><w:BookDisplay/></div>
             <div>Four</div>
         </i:IronPages>
-
+        <!--<w:YamBook ui:field="dummyBook" />-->
 
         <!--<w:CustomImageTable/>-->
     </g:HTMLPanel>

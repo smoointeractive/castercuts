@@ -110,9 +110,9 @@ public class SimpleGrid extends Composite {
 //        Button btn = new Button("x");
 //        btn.addClickHandler(event -> imageDialogBox.hide());
 
-//        VerticalPanel verticalPanel = new VerticalPanel();
-//        verticalPanel.add(btn);
-//        verticalPanel.add(image);
+//        VerticalPanel htmlPanel = new VerticalPanel();
+//        htmlPanel.add(btn);
+//        htmlPanel.add(image);
 
         imageDialogBox.setText( "you clicked this image");
         imageDialogBox.setAnimationEnabled(true);

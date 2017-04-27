@@ -2,10 +2,7 @@ package com.smoointeractive.project.widget;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.*;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.HTMLPanel;
-import com.google.gwt.user.client.ui.HasWidgets;
-import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.*;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import com.vaadin.polymer.iron.widget.IronPages;
 import com.vaadin.polymer.paper.widget.PaperTab;
@@ -35,6 +32,8 @@ public class Main extends Composite implements HasWidgets{
     HTMLPanel mainPanel;
     @UiField
     SimpleGrid imageGrid;
+//    @UiField
+//    YamBook dummyBook;
     @UiField
     IronPages pages;
     @UiField
