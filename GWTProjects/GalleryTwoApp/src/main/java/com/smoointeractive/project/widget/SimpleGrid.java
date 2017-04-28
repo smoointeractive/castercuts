@@ -4,6 +4,8 @@ package com.smoointeractive.project.widget;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.LoadEvent;
+import com.google.gwt.event.dom.client.LoadHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.user.client.ui.*;
@@ -106,6 +108,30 @@ public class SimpleGrid extends Composite {
 //        String base64String = html.split("\"")[1];
 //        Image image = new Image(base64String);
         Image image = new Image(html);
+        image.addLoadHandler(event -> {
+            Image img = (Image)event.getSource();
+//            img.getElement().setAttribute("maxheight", "200px");
+//            img.getElement().setAttribute("maxwidth", "100px");
+            double scaleFactor = 0.50; // TODO: 4/28/17 replace hardcoded scalefactor with automatic scaling based on rootpanel offsetHeight
+            int newWidth = (int)Math.round(img.getWidth() * scaleFactor);
+            int newHeight = (int)Math.round(img.getHeight() * scaleFactor);
+            com.google.gwt.core.client.GWT.log(String.valueOf(img.getWidth() + "x" + img.getHeight()));
+            com.google.gwt.core.client.GWT.log(String.valueOf(newWidth + "x" + newHeight));
+            img.getElement().setAttribute("width", String.valueOf(newWidth));
+            img.getElement().setAttribute("height", String.valueOf(newHeight));
+
+            imageDialogBox.center();
+
+        });
+
+        imageDialogBox.setText( "you clicked this image");
+        imageDialogBox.setAnimationEnabled(true);
+        imageDialogBox.setGlassEnabled(true);
+        imageDialogBox.setAutoHideEnabled(true);
+        imageDialogBox.setWidget(image);
+        imageDialogBox.show();
+//        imageDialogBox.setWidget(widget);
+
 //        image.setUrl(base64String);
 //        Button btn = new Button("x");
 //        btn.addClickHandler(event -> imageDialogBox.hide());
@@ -114,13 +140,7 @@ public class SimpleGrid extends Composite {
 //        htmlPanel.add(btn);
 //        htmlPanel.add(image);
 
-        imageDialogBox.setText( "you clicked this image");
-        imageDialogBox.setAnimationEnabled(true);
-        imageDialogBox.setGlassEnabled(true);
-        imageDialogBox.setAutoHideEnabled(true);
-//        imageDialogBox.setWidget(widget);
-        imageDialogBox.setWidget(image);
-        imageDialogBox.center();
-        imageDialogBox.show();
+
+
     }
 }
