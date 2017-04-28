@@ -31,7 +31,7 @@ public class SimpleGrid extends Composite {
     private int spacing = 20;
     private VerticalPanel verticalPanel = new VerticalPanel();
     private ArrayList<ImageGalleryDataModel> dataSource;
-    private Button selectedButton;
+//    private Simple selectedButton;
     private DialogBox imageDialogBox;
 
 
@@ -70,13 +70,14 @@ public class SimpleGrid extends Composite {
                 }
 //                Button thumbnailButton = new Button("<img src='" +
 //                        dataSource.get(i).getThumbnail() +"' width='150'></img>");
-                Button thumbnailButton = new Button("<img src='" +
+                SimpleGridButton thumbnailButton = new SimpleGridButton("<img src='" +
                         dataSource.get(i).getThumbnail() +"'></img>");
+                thumbnailButton.setSimpleGridItemIndex(i);
                 thumbnailButton.addClickHandler(new ClickHandler() {
                     @Override
                     public void onClick(ClickEvent event) {
-                        selectedButton = (Button)event.getSource();
-                        String selectedItemImageUrl = "images/"+dataSource.get(selectedButton.getTabIndex()).getImageurl();
+                        SimpleGridButton selectedButton = (SimpleGridButton)event.getSource();
+                        String selectedItemImageUrl = "images/"+dataSource.get(selectedButton.getSimpleGridItemIndex()).getImageurl();
                         com.google.gwt.core.client.GWT.log(selectedItemImageUrl);
                         launchDialogBox(selectedItemImageUrl);
 //                        launchDialogBox(selectedButton.getHTML());
