@@ -2,6 +2,7 @@ package com.smoointeractive.project.client;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.smoointeractive.project.shared.AvailableDatabases;
+import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 
 import java.util.ArrayList;
@@ -11,5 +12,6 @@ import java.util.ArrayList;
  */
 public interface DataServiceAsync {
     void LoadData(AvailableDatabases db, AsyncCallback<String> callback);
-    void GetData(AsyncCallback<ArrayList<ImageGalleryDataModel>> callback);
+    void GetImageGalleryData(AsyncCallback<ArrayList<ImageGalleryDataModel>> callback);
+    void GetDummyBookData(AsyncCallback<ArrayList<DummyBookModel>> callback);
 }

@@ -28,7 +28,7 @@
                 <span>previous</span>
                 <p:PaperIconButton ui:field="backButton" icon="arrow-back"/>
                 <g:RichTextArea ui:field="textArea"/>
-                <span style='margin-right:1em;'></span>
+                <span style='margin-right:1em;'></span> <!--adjust spacing for page indicator-->
                 <span>next</span>
                 <p:PaperIconButton ui:field="forwardButton" icon="arrow-forward"/>
                 <!--<span style='margin-right:3em;'>next</span>-->

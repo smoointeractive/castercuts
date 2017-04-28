@@ -3,6 +3,7 @@ package com.smoointeractive.project.server;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.smoointeractive.project.client.DataService;
 import com.smoointeractive.project.shared.AvailableDatabases;
+import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 
 import java.util.ArrayList;
@@ -23,7 +24,10 @@ public class DataServiceImpl extends RemoteServiceServlet implements DataService
     }
 
     @Override
-    public ArrayList<ImageGalleryDataModel> GetData() {
+    public ArrayList<ImageGalleryDataModel> GetImageGalleryData() {
         return databaseConnection.GetImageGalleryList();
     }
+
+    @Override
+    public ArrayList<DummyBookModel> GetDummyBookData() { return databaseConnection.GetDummyBookImageList(); }
 }

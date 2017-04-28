@@ -5,9 +5,11 @@ import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
+import com.smoointeractive.project.shared.DummyBookModel;
 import com.vaadin.polymer.iron.widget.IronPages;
 import com.vaadin.polymer.paper.widget.PaperCard;
 import com.vaadin.polymer.paper.widget.PaperIconButton;
@@ -35,14 +37,21 @@ public class BookDisplay extends Composite {
     RichTextArea textArea;
 
     ImageLoader imageLoader;
-    ArrayList<String> testList = new ArrayList<>(Arrays.asList("01.jpg", "01.jpg", "02.jpg", "01.jpg"));
+    private ArrayList<String> testList = new ArrayList<>(Arrays.asList("01.jpg", "01.jpg", "02.jpg", "01.jpg"));
+    private ArrayList<DummyBookModel> dataSource;
 
 
     public BookDisplay()
     {
+        setDataSource(new ArrayList<>());
         initWidget(testUiBinder.createAndBindUi(this));
+    }
 
-
+    @UiConstructor
+    public BookDisplay(ArrayList<DummyBookModel> list)
+    {
+        setDataSource(list);
+        initWidget(testUiBinder.createAndBindUi(this));
     }
 
     @Override
@@ -59,7 +68,8 @@ public class BookDisplay extends Composite {
         textArea.setPixelSize(30, 30);
 
         imageLoader = new ImageLoader(book);
-        imageLoader.setDatasource(testList);
+//        imageLoader.setDatasource(testList);
+        imageLoader.setDatasource(dataSource);
         imageLoader.setTextArea(textArea);
 
         // add click events to navigation buttons
@@ -70,5 +80,10 @@ public class BookDisplay extends Composite {
         imageLoader.selectItem(0);
 
 //        book.setImage("01.jpg");
+    }
+
+    public void setDataSource(ArrayList<DummyBookModel> data)
+    {
+        this.dataSource = data;
     }
 }

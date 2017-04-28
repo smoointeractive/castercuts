@@ -1,9 +1,11 @@
 package com.smoointeractive.project.shared;
 
+import java.io.Serializable;
+
 /**
  * Created by sachamoo on 4/28/17.
  */
-public class DummyBookModel {
+public class DummyBookModel implements Serializable{
     private int id;
     private String name;
     private String description;

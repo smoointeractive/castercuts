@@ -4,10 +4,10 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.*;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
+import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import com.vaadin.polymer.iron.widget.IronPages;
 import com.vaadin.polymer.paper.widget.PaperTab;
-import com.vaadin.polymer.paper.widget.PaperTabs;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -27,14 +27,15 @@ public class Main extends Composite implements HasWidgets{
     private static MainUiBinder mainUiBinder = GWT.create(MainUiBinder.class);
 
 //    private List<String> testList = Arrays.asList("1", "2", "3");
-    private ArrayList<ImageGalleryDataModel> data;
+    private ArrayList<ImageGalleryDataModel> imageGalleryData;
+    private ArrayList<DummyBookModel> dummyBookModelData;
 
     @UiField
     HTMLPanel mainPanel;
     @UiField
     SimpleGrid imageGrid;
-//    @UiField
-//    YamBook dummyBook;
+    @UiField
+    BookDisplay dummyBookDisplay;
     @UiField
     IronPages pages;
     @UiField
@@ -52,10 +53,16 @@ public class Main extends Composite implements HasWidgets{
         initWidget(mainUiBinder.createAndBindUi(this));
     }
 
-    public Main(ArrayList<ImageGalleryDataModel> data)
+    public Main(ArrayList<ImageGalleryDataModel> imageGalleryData, ArrayList<DummyBookModel> dummyBookModelData)
     {
-        this.data = data;
-        com.google.gwt.core.client.GWT.log("EntryPoint data: " + ((data!=null)?"valid":"invalid"));
+        this.imageGalleryData = imageGalleryData;
+        this.dummyBookModelData = dummyBookModelData;
+        initializeContent();
+    }
+
+    private void initializeContent() {
+//        ArrayList<ImageGalleryDataModel> imageGalleryData = ;
+        GWT.log("EntryPoint imageGalleryData: " + ((imageGalleryData !=null)?"valid":"invalid"));
         initWidget(mainUiBinder.createAndBindUi(this));
 
         tab1.addClickHandler(event -> pages.selectIndex(0));
@@ -76,8 +83,11 @@ public class Main extends Composite implements HasWidgets{
     @UiFactory
     public SimpleGrid MakeSimpleGrid()
     {
-        return new SimpleGrid(data, rowCount);
+        return new SimpleGrid(imageGalleryData, rowCount);
     }
+
+    @UiFactory
+    public BookDisplay MakeBookDisplay() {return new BookDisplay(dummyBookModelData);}
 
     @Override
     public void add(Widget w) {
@@ -99,9 +109,10 @@ public class Main extends Composite implements HasWidgets{
         return mainPanel.remove(w);
     }
 
-    public void SetDataSource(ArrayList<ImageGalleryDataModel> data) {
-        this.data = data;
+    public void SetImageGalleryDataSource(ArrayList<ImageGalleryDataModel> data) {
+        this.imageGalleryData = data;
     }
+    public void SetDummyBookDataSource(ArrayList<DummyBookModel> data) { this.dummyBookModelData = data; }
 
     // get dimension information when object is loaded
     @Override

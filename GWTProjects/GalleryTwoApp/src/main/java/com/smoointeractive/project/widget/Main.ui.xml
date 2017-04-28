@@ -77,7 +77,7 @@
         <i:IronPages ui:field="pages" selected="0">
             <div>One</div>
             <div><w:SimpleGrid ui:field="imageGrid"/></div>
-            <div><w:BookDisplay/></div>
+            <div><w:BookDisplay ui:field="dummyBookDisplay"/></div>
             <div>Four</div>
         </i:IronPages>
 
