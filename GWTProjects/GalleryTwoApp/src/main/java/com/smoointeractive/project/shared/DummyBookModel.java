@@ -1,15 +1,12 @@
 package com.smoointeractive.project.shared;
 
-import java.io.Serializable;
-
 /**
- * Created by sachamoo on 4/24/17.
+ * Created by sachamoo on 4/28/17.
  */
-public class ImageGalleryDataModel implements Serializable{
+public class DummyBookModel {
     private int id;
     private String name;
     private String description;
-    private String thumbnail;
     private String imageurl;
 
     public int getId() {
@@ -33,13 +30,10 @@ public class ImageGalleryDataModel implements Serializable{
         this.description = description;
     }
 
-    public String getThumbnail() {
-        return thumbnail;
+    public String getImageurl() {
+        return imageurl;
     }
-    public void setThumbnail(String thumbnail) {
-        this.thumbnail = thumbnail;
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
     }
-
-    public String getImageurl() { return imageurl; }
-    public void setImageurl(String imageurl) { this.imageurl = imageurl; }
 }

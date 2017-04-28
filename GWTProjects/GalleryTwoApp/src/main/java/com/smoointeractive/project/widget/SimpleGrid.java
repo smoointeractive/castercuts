@@ -2,21 +2,14 @@ package com.smoointeractive.project.widget;
 
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.dom.client.Element;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.safehtml.shared.SafeUri;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.user.client.ui.*;
-import com.smoointeractive.project.resources.ResourceBundle;
-import com.smoointeractive.project.shared.Contact;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Pattern;
 
 
 /**
@@ -73,13 +66,18 @@ public class SimpleGrid extends Composite {
                     horizontalPanel.setSpacing(spacing);
                     verticalPanel.add(horizontalPanel);
                 }
+//                Button thumbnailButton = new Button("<img src='" +
+//                        dataSource.get(i).getThumbnail() +"' width='150'></img>");
                 Button thumbnailButton = new Button("<img src='" +
-                        dataSource.get(i).getPhoto() +"' width='150'></img>");
+                        dataSource.get(i).getThumbnail() +"'></img>");
                 thumbnailButton.addClickHandler(new ClickHandler() {
                     @Override
                     public void onClick(ClickEvent event) {
                         selectedButton = (Button)event.getSource();
-                        launchDialogBox(selectedButton.getHTML());
+                        String selectedItemImageUrl = "images/"+dataSource.get(selectedButton.getTabIndex()).getImageurl();
+                        com.google.gwt.core.client.GWT.log(selectedItemImageUrl);
+                        launchDialogBox(selectedItemImageUrl);
+//                        launchDialogBox(selectedButton.getHTML());
                     }
                 });
                 horizontalPanel.add(thumbnailButton);
@@ -102,10 +100,12 @@ public class SimpleGrid extends Composite {
 
     private void launchDialogBox(String html)
     {
-        com.google.gwt.core.client.GWT.log(html.split("\"")[1].toString());
+        com.google.gwt.core.client.GWT.log(html);
+//        com.google.gwt.core.client.GWT.log(html.split("\"")[1].toString());
 
-        String base64String = html.split("\"")[1];
-        Image image = new Image(base64String);
+//        String base64String = html.split("\"")[1];
+//        Image image = new Image(base64String);
+        Image image = new Image(html);
 //        image.setUrl(base64String);
 //        Button btn = new Button("x");
 //        btn.addClickHandler(event -> imageDialogBox.hide());

@@ -4,14 +4,13 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.*;
+import com.smoointeractive.project.shared.AvailableDatabases;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import com.smoointeractive.project.widget.Main;
 import com.vaadin.polymer.Polymer;
-import com.vaadin.polymer.elemental.Function;
 import com.vaadin.polymer.iron.IronIconElement;
 import com.vaadin.polymer.paper.PaperIconItemElement;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -88,7 +87,7 @@ public class GalleryTwo implements EntryPoint {
         // grab image found in the first data object -- for testing
         ImageGalleryDataModel firstElement = imagesList.get(0);
 
-//        Image img = new Image(imagesList.get(0).getPhoto());
+//        Image img = new Image(imagesList.get(0).getThumbnail());
 //
 //        RootPanel.get().add(img);
 
@@ -98,9 +97,9 @@ public class GalleryTwo implements EntryPoint {
 
         RootPanel.get().add(main);
 
-//          image.setUrl(firstElement.getPhoto());
+//          image.setUrl(firstElement.getThumbnail());
         // add label to notify the user that the image should have been loaded
-        label.setText(firstElement.getName() + " was loaded!!!" + ":  " + firstElement.getPhoto());
+        label.setText(firstElement.getName() + " was loaded!!!" + ":  " + firstElement.getThumbnail());
 
         com.google.gwt.core.client.GWT.log("-----------exitblock-----------");
       }
@@ -109,7 +108,7 @@ public class GalleryTwo implements EntryPoint {
 
   private void InitializeData()
   {
-    dataService.LoadData(new AsyncCallback<String>() {
+    dataService.LoadData(AvailableDatabases.GALLERY, new AsyncCallback<String>() {
       @Override
       public void onFailure(Throwable caught) {
         com.google.gwt.core.client.GWT.log("LoadData: Failure trying to receive data from database");

@@ -1,5 +1,6 @@
 package com.smoointeractive.project.server;
 
+import com.smoointeractive.project.shared.AvailableDatabases;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import org.apache.commons.codec.binary.Base64;
 
@@ -12,13 +13,31 @@ import java.util.ArrayList;
 public class DatabaseConnection {
     private Connection databaseConnection;
     private ArrayList<ImageGalleryDataModel> imageGalleryList;
+    private static final String galleryDatabase = "imagegallerydb";
+    private static final String dummyDatabase = "dummybookdb";
 
     public DatabaseConnection() {
         imageGalleryList = new ArrayList<>();
     }
 
-    public String ConnectToDatabase()
+    public String ConnectToDatabase(AvailableDatabases db)
     {
+        String connectionResult = "Error connecting to selected database";
+        switch(db)
+        {
+            case GALLERY:
+                connectTo(galleryDatabase);
+                break;
+            case DUMMY:
+                connectTo(dummyDatabase);
+                break;
+            default:
+                break;
+        }
+        return connectionResult;
+    }
+
+    private String connectTo(String table) {
         try
         {
             String driver = "com.mysql.jdbc.Driver";
@@ -32,7 +51,7 @@ public class DatabaseConnection {
                                                              password);
 
             Statement statement = databaseConnection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM testdb");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM "+table);
 
             while(resultSet.next())
             {
@@ -40,16 +59,17 @@ public class DatabaseConnection {
                 imageGalleryDataModel.setId(resultSet.getInt("id"));
                 imageGalleryDataModel.setName(resultSet.getString("name"));
                 imageGalleryDataModel.setDescription(resultSet.getString("description"));
+                imageGalleryDataModel.setImageurl(resultSet.getString("imageurl"));
 
                 // convert image blog data to base64 string
-                Blob imageBlobData = resultSet.getBlob("photo");
+                Blob imageBlobData = resultSet.getBlob("thumbnail");
                 // store blob image data as base64 image string
                 String base64Prefix = "data:image/jpg;base64,";
                 String base64ImageResult = base64Prefix +
                                             Base64.encodeBase64String(
                                                     imageBlobData.getBytes(1,
                                                             (int)imageBlobData.length()));
-                imageGalleryDataModel.setPhoto(base64ImageResult);
+                imageGalleryDataModel.setThumbnail(base64ImageResult);
 
                 imageGalleryList.add(imageGalleryDataModel);
                 imageBlobData.free();
