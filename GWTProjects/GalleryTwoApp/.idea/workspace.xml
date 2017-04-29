@@ -24,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BookDisplay.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BookDisplay.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="62" column="112" selection-start-line="62" selection-start-column="112" selection-end-line="62" selection-end-column="112" />
+            <state relative-caret-position="389">
+              <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -58,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookDisplay.ui.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BookDisplay.ui.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.ui.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="90" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
+            <state relative-caret-position="255">
+              <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
               <folding />
             </state>
           </provider>
@@ -182,8 +182,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/server/DataServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.ui.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/ImageLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.ui.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.java" />
       </list>
     </option>
   </component>
@@ -1170,14 +1170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="62" column="112" selection-start-line="62" selection-start-column="112" selection-end-line="62" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.ui.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -1188,8 +1180,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.ui.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="90" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
+        <state relative-caret-position="255">
+          <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
           <folding />
         </state>
       </provider>

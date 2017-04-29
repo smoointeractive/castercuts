@@ -12,10 +12,6 @@
             }
             .paper-card-style /deep/ img {
             justify-content: center;
-            max-width: 30%; /* You can use different numbers for max-width and max-height! */
-            <!--max-height: 25%;-->
-            width: auto;
-            height: auto;
             }
         </style>
         <p:PaperCard ui:field="book" addStyleNames="paper-card-style">

@@ -4,6 +4,8 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
+import com.google.gwt.event.logical.shared.ResizeEvent;
+import com.google.gwt.event.logical.shared.ResizeHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.uibinder.client.UiField;
@@ -62,12 +64,24 @@ public class BookDisplay extends Composite {
     {
         // Note: use the "RootPanel.get().getOffsetWidth" or "RootPanel.get().getOffsetHeight" to get the parent
         // pixel dimensions. Using getOffsetWidth | getOffsetHeight return 0 value.
-        int panelWidth = RootPanel.get().getOffsetWidth(); //(int)Math.round(Window.getClientWidth() * 0.98);
-        int panelHeight = (int)Math.round(Window.getClientHeight() * 0.70);
 
-        com.google.gwt.core.client.GWT.log(String.valueOf(getParent().getElement().getClientWidth()));
+        // add browser resize event
+        Window.addResizeHandler(event -> {
+            int panelWidth = RootPanel.get().getOffsetWidth(); //(int)Math.round(Window.getClientWidth() * 0.98);
+            int panelHeight = (int)Math.round(Window.getClientHeight() * 0.82);
+
+            GWT.log(String.valueOf(getParent().getElement().getClientWidth()));
+
+            book.setPixelSize(panelWidth, panelHeight);
+        });
+
+        int panelWidth = RootPanel.get().getOffsetWidth(); //(int)Math.round(Window.getClientWidth() * 0.98);
+        int panelHeight = (int)Math.round(Window.getClientHeight() * 0.82);
+
+        GWT.log(String.valueOf(getParent().getElement().getClientWidth()));
 
         book.setPixelSize(panelWidth, panelHeight);
+
         textArea.setPixelSize(30, 30);
 
         imageLoader = new ImageLoader(imageHolder);
