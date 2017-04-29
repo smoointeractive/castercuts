@@ -13,9 +13,13 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
 import com.smoointeractive.project.shared.DummyBookModel;
 import com.vaadin.polymer.iron.widget.IronImage;
+import com.vaadin.polymer.iron.widget.IronInput;
+import com.vaadin.polymer.iron.widget.IronLabel;
 import com.vaadin.polymer.iron.widget.IronPages;
 import com.vaadin.polymer.paper.widget.PaperCard;
 import com.vaadin.polymer.paper.widget.PaperIconButton;
+import com.vaadin.polymer.paper.widget.PaperInput;
+import com.vaadin.polymer.paper.widget.PaperTextarea;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,8 +42,10 @@ public class BookDisplay extends Composite {
     PaperIconButton backButton;
     @UiField
     PaperIconButton forwardButton;
+//    @UiField
+//    RichTextArea textArea;
     @UiField
-    RichTextArea textArea;
+PaperInput pageIndicator;
 
     ImageLoader imageLoader;
     private ArrayList<String> testList = new ArrayList<>(Arrays.asList("01.jpg", "01.jpg", "02.jpg", "01.jpg"));
@@ -82,13 +88,14 @@ public class BookDisplay extends Composite {
 
         book.setPixelSize(panelWidth, panelHeight);
 
-        textArea.setPixelSize(30, 30);
+//        textArea.setPixelSize(30, 30);
 
         imageLoader = new ImageLoader(imageHolder);
 //        imageLoader = new ImageLoader(book);
 //        imageLoader.setDatasource(testList);
         imageLoader.setDatasource(dataSource);
-        imageLoader.setTextArea(textArea);
+//        imageLoader.setPageIndicator(textArea);
+        imageLoader.setPageIndicator(pageIndicator);
 
         // add click events to navigation buttons
         backButton.addClickHandler(event -> imageLoader.previous());

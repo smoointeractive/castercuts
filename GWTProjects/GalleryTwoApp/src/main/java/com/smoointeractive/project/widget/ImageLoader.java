@@ -3,7 +3,11 @@ package com.smoointeractive.project.widget;
 import com.google.gwt.user.client.ui.RichTextArea;
 import com.smoointeractive.project.shared.DummyBookModel;
 import com.vaadin.polymer.iron.widget.IronImage;
+import com.vaadin.polymer.iron.widget.IronInput;
+import com.vaadin.polymer.iron.widget.IronLabel;
 import com.vaadin.polymer.paper.widget.PaperCard;
+import com.vaadin.polymer.paper.widget.PaperInput;
+import com.vaadin.polymer.paper.widget.PaperTextarea;
 
 import java.util.ArrayList;
 
@@ -17,6 +21,7 @@ public class ImageLoader {
     private boolean canNavigate = false;
     private int currentIndex = 0;
     private RichTextArea textArea;
+    private PaperInput indicator;
     private static final String pathPrefix = "images/";
 
     public ImageLoader(PaperCard card)
@@ -33,10 +38,15 @@ public class ImageLoader {
         this.imagePaths = list;
     }
 
-    public void setTextArea(RichTextArea textArea)
+    public void setPageIndicator(RichTextArea textArea)
     {
         this.textArea = textArea;
         this.textArea.setText("0");
+    }
+    public void setPageIndicator(PaperInput indicator)
+    {
+        this.indicator = indicator;
+        this.indicator.setTitle("0");
     }
 
     public boolean next()
@@ -76,6 +86,7 @@ public class ImageLoader {
 //            paperCard.setImage(imagePaths.get(index).getImageurl());
             ironImage.setSrc(imagePaths.get(index).getImageurl());
             if(null != textArea) textArea.setText(String.valueOf(currentIndex));
+            if(null != indicator) indicator.setValue(String.valueOf(currentIndex));
         }
     }
 
@@ -89,6 +100,7 @@ public class ImageLoader {
 //            paperCard.setImage(pathPrefix + imagePaths.get(currentIndex).getImageurl());
 
             if(null != textArea) textArea.setText(String.valueOf(currentIndex));
+            if(null != indicator) indicator.setValue(String.valueOf(currentIndex));
         }
     }
 }
