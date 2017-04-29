@@ -10,6 +10,7 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
 import com.smoointeractive.project.shared.DummyBookModel;
+import com.vaadin.polymer.iron.widget.IronImage;
 import com.vaadin.polymer.iron.widget.IronPages;
 import com.vaadin.polymer.paper.widget.PaperCard;
 import com.vaadin.polymer.paper.widget.PaperIconButton;
@@ -29,6 +30,8 @@ public class BookDisplay extends Composite {
 
     @UiField
     PaperCard book;
+    @UiField
+    IronImage imageHolder;
     @UiField
     PaperIconButton backButton;
     @UiField
@@ -67,7 +70,8 @@ public class BookDisplay extends Composite {
         book.setPixelSize(panelWidth, panelHeight);
         textArea.setPixelSize(30, 30);
 
-        imageLoader = new ImageLoader(book);
+        imageLoader = new ImageLoader(imageHolder);
+//        imageLoader = new ImageLoader(book);
 //        imageLoader.setDatasource(testList);
         imageLoader.setDatasource(dataSource);
         imageLoader.setTextArea(textArea);

@@ -6,6 +6,7 @@ import com.smoointeractive.project.shared.AvailableDatabases;
 import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**

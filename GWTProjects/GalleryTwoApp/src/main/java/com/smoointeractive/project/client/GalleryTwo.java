@@ -64,7 +64,7 @@ public class GalleryTwo implements EntryPoint {
   }
 
   private void initiateApplication() {
-    InitializeDummyBookData();
+//   InitializeDummyBookData();
     InitializeImageGalleryData();
     com.google.gwt.core.client.GWT.log("EntryPoint imagesList: " + ((imagesList!=null)?"valid":"invalid"));
 
@@ -103,9 +103,9 @@ public class GalleryTwo implements EntryPoint {
 //
 //        RootPanel.get().add(main);
 
-        main = new Main(imagesList, dummyBookList);
-
-        RootPanel.get().add(main);
+//        main = new Main(imagesList, dummyBookList);
+//        RootPanel.get().add(main);
+        InitializeDummyBookData();
 
 //          image.setUrl(firstElement.getThumbnail());
         // add label to notify the user that the image should have been loaded
@@ -138,6 +138,8 @@ public class GalleryTwo implements EntryPoint {
         // since acquiring data is an asynchronous process, initializing Main here guarantees that data is ready
         // to be passed on to main
 //        main.SetDummyBookDataSource(dummyBookList);
+        main = new Main(imagesList, dummyBookList);
+        RootPanel.get().add(main);
 
         com.google.gwt.core.client.GWT.log("initializeDummyBookDataSource: -----------exitblock-----------");
       }

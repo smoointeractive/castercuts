@@ -2,6 +2,7 @@ package com.smoointeractive.project.widget;
 
 import com.google.gwt.user.client.ui.RichTextArea;
 import com.smoointeractive.project.shared.DummyBookModel;
+import com.vaadin.polymer.iron.widget.IronImage;
 import com.vaadin.polymer.paper.widget.PaperCard;
 
 import java.util.ArrayList;
@@ -12,13 +13,19 @@ import java.util.ArrayList;
 public class ImageLoader {
     private ArrayList<DummyBookModel> imagePaths;
     private PaperCard paperCard;
+    private IronImage ironImage;
     private boolean canNavigate = false;
     private int currentIndex = 0;
     private RichTextArea textArea;
+    private static final String pathPrefix = "images/";
 
     public ImageLoader(PaperCard card)
     {
         paperCard = card;
+    }
+    public ImageLoader(IronImage image)
+    {
+        ironImage = image;
     }
 
     public void setDatasource(ArrayList<DummyBookModel> list)
@@ -66,7 +73,8 @@ public class ImageLoader {
     {
         if(null !=imagePaths && imagePaths.size() >= 1)
         {
-            paperCard.setImage(imagePaths.get(index).getImageurl());
+//            paperCard.setImage(imagePaths.get(index).getImageurl());
+            ironImage.setSrc(imagePaths.get(index).getImageurl());
             if(null != textArea) textArea.setText(String.valueOf(currentIndex));
         }
     }
@@ -75,7 +83,11 @@ public class ImageLoader {
     {
         if(null !=imagePaths && imagePaths.size() >= 1)
         {
-            paperCard.setImage(imagePaths.get(currentIndex).getImageurl());
+//            paperCard.getElement().setAttribute("sizing", "cover");
+//            paperCard.getElement().setAttribute("sizing", "cover");
+            ironImage.setSrc(pathPrefix + imagePaths.get(currentIndex).getImageurl());
+//            paperCard.setImage(pathPrefix + imagePaths.get(currentIndex).getImageurl());
+
             if(null != textArea) textArea.setText(String.valueOf(currentIndex));
         }
     }

@@ -12,14 +12,15 @@
             }
             .paper-card-style /deep/ img {
             justify-content: center;
-            max-width: 60%; /* You can use different numbers for max-width and max-height! */
-            max-height: 55%;
+            max-width: 30%; /* You can use different numbers for max-width and max-height! */
+            <!--max-height: 25%;-->
             width: auto;
             height: auto;
             }
         </style>
         <p:PaperCard ui:field="book" addStyleNames="paper-card-style">
             <!--<p:PaperIconButton toggles="true" icon="alarm">active</p:PaperIconButton>-->
+            <i:IronImage ui:field="imageHolder" sizing="contain" width="100%" height="100%"/>
         <div class="page-description">
         <g:HTML>Hello this is a test!</g:HTML>
         </div>
