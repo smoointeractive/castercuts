@@ -1,11 +1,6 @@
 package com.smoointeractive.project.widget;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.dom.client.DivElement;
-import com.google.gwt.dom.client.Document;
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.event.logical.shared.ResizeEvent;
-import com.google.gwt.event.logical.shared.ResizeHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.uibinder.client.UiField;
@@ -13,13 +8,9 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
 import com.smoointeractive.project.shared.DummyBookModel;
 import com.vaadin.polymer.iron.widget.IronImage;
-import com.vaadin.polymer.iron.widget.IronInput;
-import com.vaadin.polymer.iron.widget.IronLabel;
-import com.vaadin.polymer.iron.widget.IronPages;
 import com.vaadin.polymer.paper.widget.PaperCard;
 import com.vaadin.polymer.paper.widget.PaperIconButton;
 import com.vaadin.polymer.paper.widget.PaperInput;
-import com.vaadin.polymer.paper.widget.PaperTextarea;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,7 +18,7 @@ import java.util.Arrays;
 /**
  * Created by sachamoo on 4/26/17.
  */
-public class BookDisplay extends Composite {
+public class BookDisplay extends Composite implements BookDisplayEventListener {
     interface TestUiBinder extends UiBinder<Widget, BookDisplay> {
 
     }
@@ -39,9 +30,9 @@ public class BookDisplay extends Composite {
     @UiField
     IronImage imageHolder;
     @UiField
-    PaperIconButton backButton;
+    PaperIconButton previousButton;
     @UiField
-    PaperIconButton forwardButton;
+    PaperIconButton nextButton;
 //    @UiField
 //    RichTextArea textArea;
     @UiField
@@ -98,14 +89,39 @@ PaperInput pageIndicator;
         imageLoader.setPageIndicator(pageIndicator);
 
         // add click events to navigation buttons
-        backButton.addClickHandler(event -> imageLoader.previous());
-        forwardButton.addClickHandler(event -> imageLoader.next());
+        previousButton.addClickHandler(event -> imageLoader.previous());
+        nextButton.addClickHandler(event -> imageLoader.next());
+
+        // add to bookdisplayevent
+        imageLoader.addEventLister(this);
 
 
         imageLoader.selectItem(0);
 
 //        book.setImage("01.jpg");
     }
+
+    @Override
+    public void NotifyChanges(Object something) {
+        String message = (String)something;
+        GWT.log(message);
+        switch(message)
+        {
+            case "previousDisabled":
+                previousButton.setDisabled(true);
+                nextButton.setDisabled(false);
+                break;
+            case "nextDisabled":
+                previousButton.setDisabled(false);
+                nextButton.setDisabled(true);
+                break;
+            case "enableAllButtons":
+                previousButton.setDisabled(false);
+                nextButton.setDisabled(false);
+                break;
+        }
+    }
+
 
     public void setDataSource(ArrayList<DummyBookModel> data)
     {

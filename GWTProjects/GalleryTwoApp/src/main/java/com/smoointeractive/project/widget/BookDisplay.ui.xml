@@ -76,18 +76,18 @@
         <!--<div class="page-navigation">-->
             <!--<div>-->
                 <!--<span>previous</span>-->
-                <!--<p:PaperIconButton ui:field="backButton" icon="arrow-back"/>-->
+                <!--<p:PaperIconButton ui:field="previousButton" icon="arrow-back"/>-->
                 <!--<g:RichTextArea ui:field="textArea"/>-->
                 <!--<span style='margin-right:1em;'></span> &lt;!&ndash;adjust spacing for page indicator&ndash;&gt;-->
                 <!--<span>next</span>-->
-                <!--<p:PaperIconButton ui:field="forwardButton" icon="arrow-forward"/>-->
+                <!--<p:PaperIconButton ui:field="nextButton" icon="arrow-forward"/>-->
                 <!--&lt;!&ndash;<span style='margin-right:3em;'>next</span>&ndash;&gt;-->
                 <!--&lt;!&ndash;<span style='margin-left:35em;'>next</span>&ndash;&gt;-->
             <!--&lt;!&ndash;<i:IronIcon icon="icons:arrow-forward"/>&ndash;&gt;-->
             <!--</div>-->
         <!--</div>-->
             <g:HorizontalPanel addStyleNames="horizontal-panel">
-                <p:PaperIconButton ui:field="backButton"
+                <p:PaperIconButton ui:field="previousButton"
                                    icon="arrow-back"
                                    addStyleNames="paper-icon-button-left">previous</p:PaperIconButton>
                 <!--<g:RichTextArea ui:field="textArea"/>-->
@@ -96,7 +96,7 @@
                               alwaysFloatLabel="false"
                               size="1"
                               addStyleNames="paper-input"/>
-                <p:PaperIconButton ui:field="forwardButton"
+                <p:PaperIconButton ui:field="nextButton"
                                    icon="arrow-forward"
                                    addStyleNames="paper-icon-button-right">next</p:PaperIconButton>
             </g:HorizontalPanel>

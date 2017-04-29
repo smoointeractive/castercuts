@@ -23,6 +23,7 @@ public class ImageLoader {
     private RichTextArea textArea;
     private PaperInput indicator;
     private static final String pathPrefix = "images/";
+    private BookDisplayEvent bookDisplayEvent;
 
     public ImageLoader(PaperCard card)
     {
@@ -31,6 +32,7 @@ public class ImageLoader {
     public ImageLoader(IronImage image)
     {
         ironImage = image;
+        bookDisplayEvent = new BookDisplayEvent();
     }
 
     public void setDatasource(ArrayList<DummyBookModel> list)
@@ -59,6 +61,7 @@ public class ImageLoader {
         else
         {
             canNavigate = false;
+            bookDisplayEvent.nextButtonStateChanged();
         }
         com.google.gwt.core.client.GWT.log("class: ImageLoader -> next(), currentIndex: " + currentIndex);
         return canNavigate;
@@ -74,6 +77,7 @@ public class ImageLoader {
         else
         {
             canNavigate = false;
+            bookDisplayEvent.previousButtonStateChanged();
         }
         com.google.gwt.core.client.GWT.log("class: ImageLoader -> previous(), currentIndex: " + currentIndex);
         return canNavigate;
@@ -101,6 +105,18 @@ public class ImageLoader {
 
             if(null != textArea) textArea.setText(String.valueOf(currentIndex));
             if(null != indicator) indicator.setValue(String.valueOf(currentIndex));
+
+            bookDisplayEvent.enableButtonsStateChanged();
+
         }
+    }
+
+    public void addEventLister(BookDisplayEventListener listener)
+    {
+        this.bookDisplayEvent.addEventListener(listener);
+    }
+    public void removeEventLister(BookDisplayEventListener listener)
+    {
+        this.bookDisplayEvent.removeEventListener(listener);
     }
 }

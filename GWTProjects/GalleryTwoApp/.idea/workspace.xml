@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/ImageLoader.java" line="68" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/ImageLoader.java" line="71" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="552b7912-fe4f-4ba5-a0e4-bf3005119f88" name="Default" comment="" />
@@ -39,22 +39,66 @@
       <file leaf-file-name="BookDisplay.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="97" column="29" selection-start-line="97" selection-start-column="29" selection-end-line="97" selection-end-column="29" />
+            <state relative-caret-position="264">
+              <caret line="128" column="5" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageLoader.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PaperIconButton.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/polymer/vaadin-gwt-polymer-elements/1.7.0.1-SNAPSHOT/vaadin-gwt-polymer-elements-1.7.0.1-SNAPSHOT-sources.jar!/com/vaadin/polymer/paper/widget/PaperIconButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="41">
+              <caret line="262" column="16" selection-start-line="262" selection-start-column="16" selection-end-line="262" selection-end-column="16" />
+              <folding>
+                <element signature="e#8895#8896#0" expanded="true" />
+                <element signature="e#8947#8948#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookDisplayEvent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplayEvent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="35" column="41" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="41" />
+              <folding>
+                <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#416#417#0" expanded="true" />
+                <element signature="e#493#494#0" expanded="true" />
+                <element signature="e#540#541#0" expanded="true" />
+                <element signature="e#592#593#0" expanded="true" />
+                <element signature="e#643#644#0" expanded="true" />
+                <element signature="e#690#691#0" expanded="true" />
+                <element signature="e#737#738#0" expanded="true" />
+                <element signature="e#787#788#0" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookDisplayEventListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplayEventListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageLoader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/ImageLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="88" column="53" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
+            <state relative-caret-position="171">
+              <caret line="106" column="83" selection-start-line="106" selection-start-column="83" selection-end-line="106" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#994#995#0" expanded="true" />
-                <element signature="e#1027#1028#0" expanded="true" />
+                <element signature="e#3578#3579#0" expanded="true" />
+                <element signature="e#3642#3643#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookDisplay.ui.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BookDisplay.ui.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.ui.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-165">
-              <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+            <state relative-caret-position="234">
+              <caret line="98" column="49" selection-start-line="98" selection-start-column="49" selection-end-line="98" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -85,36 +129,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/client/DataService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/server/DataServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/server/DatabaseConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-420">
-              <caret line="77" column="53" selection-start-line="77" selection-start-column="53" selection-end-line="77" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -135,9 +149,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -182,10 +196,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/server/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/server/DataServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.ui.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplayEventListeners.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplayEventListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.ui.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplayEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/ImageLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.ui.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.ui.xml" />
       </list>
     </option>
   </component>
@@ -775,7 +792,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976827" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976827" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -783,7 +800,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23390558" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4046346" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4046346" sideWeight="0.49427754" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -843,45 +860,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding>
-            <element signature="e#1327#1328#0" expanded="false" />
-            <element signature="e#1389#1390#0" expanded="false" />
-            <element signature="e#2440#2441#0" expanded="false" />
-            <element signature="e#2505#2506#0" expanded="false" />
-            <element signature="e#2655#2656#0" expanded="false" />
-            <element signature="e#2687#2688#0" expanded="false" />
-            <element signature="e#2728#2729#0" expanded="false" />
-            <element signature="e#2761#2762#0" expanded="false" />
-            <element signature="e#2817#2818#0" expanded="false" />
-            <element signature="e#2860#2861#0" expanded="false" />
-            <element signature="e#2913#2914#0" expanded="false" />
-            <element signature="e#2955#2956#0" expanded="false" />
-            <element signature="e#3039#3040#0" expanded="false" />
-            <element signature="e#3083#3084#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.ui.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/CustomImageTable.ui.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/client/DataService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -963,6 +941,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1031,6 +1012,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="81" selection-start-line="6" selection-start-column="81" selection-end-line="6" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1137,26 +1119,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="97" column="29" selection-start-line="97" selection-start-column="29" selection-end-line="97" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/ImageLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="88" column="53" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1177,9 +1139,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.ui.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        <state relative-caret-position="234">
+          <caret line="98" column="49" selection-start-line="98" selection-start-column="49" selection-end-line="98" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/polymer/vaadin-gwt-polymer-elements/1.7.0.1-SNAPSHOT/vaadin-gwt-polymer-elements-1.7.0.1-SNAPSHOT-sources.jar!/com/vaadin/polymer/paper/widget/PaperIconButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="262" column="16" selection-start-line="262" selection-start-column="16" selection-end-line="262" selection-end-column="16" />
+          <folding>
+            <element signature="e#8895#8896#0" expanded="true" />
+            <element signature="e#8947#8948#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="128" column="5" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplayEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="35" column="41" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="41" />
+          <folding>
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#737#738#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/BookDisplayEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smoointeractive/project/widget/ImageLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="106" column="83" selection-start-line="106" selection-start-column="83" selection-end-line="106" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3578#3579#0" expanded="true" />
+            <element signature="e#3642#3643#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
