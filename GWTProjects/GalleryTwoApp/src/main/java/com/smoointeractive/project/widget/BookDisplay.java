@@ -105,19 +105,26 @@ PaperInput pageIndicator;
     public void NotifyChanges(Object something) {
         String message = (String)something;
         GWT.log(message);
+        // set previous and next button states
         switch(message)
         {
             case "previousDisabled":
                 previousButton.setDisabled(true);
                 nextButton.setDisabled(false);
+                previousButton.setStyle("color: #1ae4ff;");
+                nextButton.setStyle("color: white;");
                 break;
             case "nextDisabled":
                 previousButton.setDisabled(false);
                 nextButton.setDisabled(true);
+                previousButton.setStyle("color: white;");
+                nextButton.setStyle("color: #1ae4ff;");
                 break;
             case "enableAllButtons":
                 previousButton.setDisabled(false);
                 nextButton.setDisabled(false);
+                previousButton.setStyle("color: white;");
+                nextButton.setStyle("color: white;");
                 break;
         }
     }
