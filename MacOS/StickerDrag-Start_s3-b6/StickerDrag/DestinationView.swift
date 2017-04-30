@@ -41,7 +41,9 @@ class DestinationView: NSView {
     setup()
   }
   
-  var acceptableTypes: Set<String> { return [NSURLPboardType] }
+  // Register the TIFF type like you did for URLs and created a subset to use next
+  var nonURLTypes: Set<String> {return [String(kUTTypeTIFF)] }
+  var acceptableTypes: Set<String> { return nonURLTypes.union([NSURLPboardType]) }
   
   func setup() {
     register(forDraggedTypes: Array(acceptableTypes))
@@ -49,6 +51,7 @@ class DestinationView: NSView {
   
   //1. let is for constance and var is for variables -- create dictionary
   let filteringOptions = [NSPasteboardURLReadingContentsConformToTypesKey:NSImage.imageTypes()]
+  
   // java private boolean shouldAllowDrag(NSDraggingInfo draggingInfo)
   func shouldAllowDrag(_ draggingInfo: NSDraggingInfo) -> Bool {
     var canAccept = false
@@ -59,6 +62,11 @@ class DestinationView: NSView {
     //3. Ask pasteboard if it has any URLs and whether those URLs are referencs to
     //   images. If it has images, it accepts the drag. Otherwise, it rejects it.
     if pasteBoard.canReadObject(forClasses: [NSURL.self], options: filteringOptions) {
+      canAccept = true;
+      // Here you're checking if the nonURLTypes set contains any of the types received from the pasteboard
+      // and if that's the case, accepts the drag operation. Since you added a TIFF type to that
+      // set, the view accepts TIFF data from the pasteboard
+    }else if let types = pasteBoard.types, nonURLTypes.intersection(types).count > 0 {
       canAccept = true;
     }
     return canAccept
@@ -127,6 +135,8 @@ class DestinationView: NSView {
       urls.count > 0 {
       delegate?.processImageURLs(urls, center: point)
       return true
+    } else if let image = NSImage(pasteboard: pasteBoard) {
+      delegate?.processImage(image, center: point)
     }
     return false
   }
