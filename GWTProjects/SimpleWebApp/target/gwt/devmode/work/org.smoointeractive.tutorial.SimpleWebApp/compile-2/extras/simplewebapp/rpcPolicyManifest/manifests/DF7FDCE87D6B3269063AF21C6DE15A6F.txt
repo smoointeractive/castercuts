@@ -1,2 +1,0 @@
-serviceClass: org.smoointeractive.tutorial.client.GreetingService
-path: 56947D5A5421785C710BB61B6746D9B5.gwt.rpc

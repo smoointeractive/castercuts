@@ -1,2 +1,0 @@
-This is an initial file that would be pushed to the local git server.
-

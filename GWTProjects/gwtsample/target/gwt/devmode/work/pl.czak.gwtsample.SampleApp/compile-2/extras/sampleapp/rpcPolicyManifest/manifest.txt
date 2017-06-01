@@ -1,3 +1,0 @@
-# Module sampleapp
-# RPC service class, partial path of RPC policy file
-pl.czak.gwtsample.client.GreetingService, DB3287FA620D2B33C52FA2AF57F92C48.gwt.rpc
