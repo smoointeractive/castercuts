@@ -4,6 +4,7 @@ import com.smoointeractive.project.shared.AvailableDatabases;
 import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.codec.binary.StringUtils;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -117,12 +118,18 @@ public class DatabaseConnection {
 
         // convert image blog data to base64 string
         Blob imageBlobData = resultSet.getBlob("thumbnail");
+        int imageBlobDataLength = (int)imageBlobData.length();
+        byte[] imageBlobDataBytes = imageBlobData.getBytes(1, imageBlobDataLength);
         // store blob image data as base64 image string
         String base64Prefix = "data:image/jpg;base64,";
-        String base64ImageResult = base64Prefix +
-                                    Base64.encodeBase64String(
-                                            imageBlobData.getBytes(1,
-                                                    (int)imageBlobData.length()));
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(base64Prefix);
+        stringBuilder.append(
+                StringUtils.newStringUtf8(Base64.encodeBase64(imageBlobDataBytes, false))
+        );
+        String base64ImageResult = stringBuilder.toString();
+//        System.out.println(imageBlobData.length());
+//        System.out.println(base64ImageResult);
         imageGalleryDataModel.setThumbnail(base64ImageResult);
 
         imageGalleryList.add(imageGalleryDataModel);

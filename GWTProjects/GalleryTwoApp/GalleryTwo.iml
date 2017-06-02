@@ -5,7 +5,6 @@
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -68,6 +67,16 @@
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.vaadin.polymer:vaadin-gwt-polymer-elements:1.7.0.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="mysql:mysql-connector-java:5.1.39" level="application" />
+    <orderEntry type="library" name="Maven: com.google.appengine:appengine-api-1.0-sdk:1.8.8" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.geronimo.specs:geronimo-jta_1.1_spec:1.1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.geronimo.specs:geronimo-jpa_3.0_spec:1.1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: javax.jdo:jdo2-api:2.3-eb" level="project" />
+    <orderEntry type="library" name="Maven: javax.transaction:transaction-api:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.datanucleus:datanucleus-core:1.1.5" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.appengine.orm:datanucleus-appengine:1.0.10" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.datanucleus:datanucleus-jpa:1.1.5" level="project" />
+    <orderEntry type="library" name="Maven: com.google.appengine:appengine-tools-sdk:1.8.8" level="project" />
+    <orderEntry type="library" name="biz.source_code:base64coder:2010-12-19" level="project" />
+    <orderEntry type="library" name="commons-codec:commons-codec:1.8" level="project" />
   </component>
 </module>

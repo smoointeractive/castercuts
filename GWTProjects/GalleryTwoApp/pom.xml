@@ -10,8 +10,16 @@
   <version>1.0-SNAPSHOT</version>
   <name>com.smoointeractive.project.GalleryTwo</name>
 
-  <properties>
+<!--<repositories>
+    <repository>
+      <id>net.kindleit</id>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+</repositories>-->
 
+  <properties>
+    <gwtVersion>2.8.0</gwtVersion>
+    <gaeVersion>1.8.8</gaeVersion>
     <!-- Setting maven.compiler.source to something different to 1.8
          needs that you configure the sourceLevel in gwt-maven-plugin since
          GWT compiler 2.8 requires 1.8 (see gwt-maven-plugin block below) -->
@@ -29,7 +37,7 @@
       <dependency>
         <groupId>com.google.gwt</groupId>
         <artifactId>gwt</artifactId>
-        <version>2.8.0</version>
+        <version>${gwtVersion}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -63,6 +71,19 @@
         <artifactId>vaadin-gwt-polymer-elements</artifactId>
         <version>1.7.0.1-SNAPSHOT</version>
         <scope>provided</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/net.kindleit/gae-runtime -->
+    <dependency>
+        <groupId>net.kindleit</groupId>
+        <artifactId>gae-runtime</artifactId>
+        <version>${gaeVersion}</version>
+        <type>pom</type>
+<!--        <exclusions>-->
+<!--            <exclusion>-->
+<!--                <groupId>com.google.appengine</groupId>-->
+<!--                <artifactId>appengine-tools-sdk</artifactId>-->
+<!--            </exclusion>-->
+<!--        </exclusions>-->
     </dependency>
   </dependencies>
 
@@ -107,6 +128,16 @@
           <startupUrls>
             <startupUrl>GalleryTwo.html</startupUrl>
           </startupUrls>
+          <appEngineVersion>${gaeVersion}</appEngineVersion>
+          <server>com.google.appengine.tools.development.gwt.AppEngineLauncher</server>
+         <!-- <dependencies>
+        <dependency>
+            <groupId>net.kindleit</groupId>
+            <artifactId>gae-runtime</artifactId>
+            <version>${gaeVersion}</version>
+            <type>pom</type>
+        </dependency>
+    </dependencies> -->
         </configuration>
       </plugin>
 
@@ -118,6 +149,12 @@
           <skip>true</skip>
         </configuration>
       </plugin>
+
+    <plugin>
+        <groupId>com.google.appengine</groupId>
+        <artifactId>appengine-maven-plugin</artifactId>
+        <version>1.9.52</version>
+    </plugin>
 
     </plugins>
   </build>
