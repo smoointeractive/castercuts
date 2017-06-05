@@ -37,7 +37,7 @@ public class SimpleGrid extends Composite {
 
     public SimpleGrid()
     {
-        setDataSource(new ArrayList<>());
+        setDataSource(new ArrayList<ImageGalleryDataModel>());
 
         initWidget(simpleGridUiBinder.createAndBindUi(this));
 
@@ -109,20 +109,23 @@ public class SimpleGrid extends Composite {
 //        String base64String = html.split("\"")[1];
 //        Image image = new Image(base64String);
         Image image = new Image(html);
-        image.addLoadHandler(event -> {
-            Image img = (Image)event.getSource();
+        image.addLoadHandler(new LoadHandler() {
+            @Override
+            public void onLoad(LoadEvent event) {
+                Image img = (Image) event.getSource();
 //            img.getElement().setAttribute("maxheight", "200px");
 //            img.getElement().setAttribute("maxwidth", "100px");
-            double scaleFactor = 0.50; // TODO: 4/28/17 replace hardcoded scalefactor with automatic scaling based on rootpanel offsetHeight
-            int newWidth = (int)Math.round(img.getWidth() * scaleFactor);
-            int newHeight = (int)Math.round(img.getHeight() * scaleFactor);
-            com.google.gwt.core.client.GWT.log(String.valueOf(img.getWidth() + "x" + img.getHeight()));
-            com.google.gwt.core.client.GWT.log(String.valueOf(newWidth + "x" + newHeight));
-            img.getElement().setAttribute("width", String.valueOf(newWidth));
-            img.getElement().setAttribute("height", String.valueOf(newHeight));
+                double scaleFactor = 0.50; // TODO: 4/28/17 replace hardcoded scalefactor with automatic scaling based on rootpanel offsetHeight
+                int newWidth = (int) Math.round(img.getWidth() * scaleFactor);
+                int newHeight = (int) Math.round(img.getHeight() * scaleFactor);
+                GWT.log(String.valueOf(img.getWidth() + "x" + img.getHeight()));
+                GWT.log(String.valueOf(newWidth + "x" + newHeight));
+                img.getElement().setAttribute("width", String.valueOf(newWidth));
+                img.getElement().setAttribute("height", String.valueOf(newHeight));
 
-            imageDialogBox.center();
+                imageDialogBox.center();
 
+            }
         });
 
         imageDialogBox.setText( "you clicked this image");

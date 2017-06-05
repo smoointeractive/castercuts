@@ -9,6 +9,7 @@ import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import com.smoointeractive.project.widget.Main;
 import com.vaadin.polymer.Polymer;
+import com.vaadin.polymer.elemental.Function;
 import com.vaadin.polymer.iron.IronIconElement;
 import com.vaadin.polymer.paper.PaperIconItemElement;
 
@@ -56,10 +57,13 @@ public class GalleryTwo implements EntryPoint {
             PaperIconItemElement.SRC,
             IronIconElement.SRC,
             "iron-icons"),
-            o -> {
-              // app is executed when all imports succeed
-              initiateApplication();
-              return null;
+            new Function() {
+              @Override
+              public Object call(Object o) {
+                // app is executed when all imports succeed
+                GalleryTwo.this.initiateApplication();
+                return null;
+              }
             });
   }
 

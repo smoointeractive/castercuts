@@ -1,6 +1,8 @@
 package com.smoointeractive.project.widget;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.*;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
@@ -65,10 +67,30 @@ public class Main extends Composite implements HasWidgets{
         GWT.log("EntryPoint imageGalleryData: " + ((imageGalleryData !=null)?"valid":"invalid"));
         initWidget(mainUiBinder.createAndBindUi(this));
 
-        tab1.addClickHandler(event -> pages.selectIndex(0));
-        tab2.addClickHandler(event -> pages.selectIndex(1));
-        tab3.addClickHandler(event -> pages.selectIndex(2));
-        tab4.addClickHandler(event -> pages.selectIndex(3));
+        tab1.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                pages.selectIndex(0);
+            }
+        });
+        tab2.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                pages.selectIndex(1);
+            }
+        });
+        tab3.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                pages.selectIndex(2);
+            }
+        });
+        tab4.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                pages.selectIndex(3);
+            }
+        });
     }
 
     @UiChild

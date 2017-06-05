@@ -51,10 +51,17 @@ public class DatabaseConnection {
             String user = "root";
             String password = "OB?A1a&-KGw1"; // temp
 
-            Class.forName(driver).newInstance();
+           /* Class.forName(driver).newInstance();
             databaseConnection = DriverManager.getConnection(databaseUrl,
                                                              user,
-                                                             password);
+                                                             password);*/
+
+           databaseConnection = InitializeDatabaseConnection.sGetInstance().getDataConnection();
+
+            if(databaseConnection == null) {
+                System.out.println("----->>>" + databaseConnection.getClientInfo());
+                return "databaseConnnection is invalid!";
+            }
 
             Statement statement = databaseConnection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM "+table);
@@ -88,19 +95,7 @@ public class DatabaseConnection {
 
             connectionResult = "Connected to Database.";
 
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-            System.out.println("Error connecting to database - not good eh. Error message: "+ e.toString());
-            return e.toString();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-            System.out.println("Error connecting to database - not good eh. Error message: "+ e.toString());
-            return e.toString();
         } catch (SQLException e) {
-            e.printStackTrace();
-            System.out.println("Error connecting to database - not good eh. Error message: "+ e.toString());
-            return e.toString();
-        } catch (ClassNotFoundException e) {
             e.printStackTrace();
             System.out.println("Error connecting to database - not good eh. Error message: "+ e.toString());
             return e.toString();

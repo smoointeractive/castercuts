@@ -1,0 +1,16 @@
+Gallery app used to display illustrations and concept art. Developed in java using the GWT libraries. This iteration has been refactored to target Google App Engine deployment. Also, since the data is being acquired from a MySQL database, migration to google cloud sql was necessary.
+
+To get this working locally, google cloud sdk, a google app engine sdk must be installed and configured apropriately. Also to run locally google 'application-defaul-credentials login' must be set.
+
+C:\WINDOWS\system32>gcloud beta auth application-default login
+Your browser has been opened to visit:
+
+    https://accounts.google.com/o/oauth2/auth?redirect_uri=.............&access_type=offline
+
+
+
+Application Default Credentials are now saved, and will
+use the provided account.
+
+This does not affect any credentials that you may have
+set up for the Google Cloud SDK.

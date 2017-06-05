@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
   <application>gallerytwo-169518</application>
-  <version>alpha-001</version>
+  <version>alpha-002</version>
+  <use-google-connector-j>true</use-google-connector-j>
   <threadsafe>true</threadsafe>
+  <system-properties>
+    <!--<property name="INSTANCE_CONNECTION_NAME" value="gallerytwo-169518:us-west1:imagegallery" />-->
+    <property name="ae-cloudsql.cloudsql-database-url" value="jdbc:google:mysql://${INSTANCE_CONNECTION_NAME}/${database}?user=${user}&amp;password=${password}" />
+    <property name="ae-cloudsql.local-database-url" value="jdbc:mysql://google/${database}?cloudSqlInstance=${INSTANCE_CONNECTION_NAME}&amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory&amp;user=${user}&amp;password=${password}&amp;useSSL=false" />
+    <!--<property name="ae-cloudsql.cloudsql-database-url" value="jdbc:google:mysql://gallerytwo-169518:us-west1:gallery/imagedb?user=root&amp;password=7K5LJaNOchhJ6ex1" />-->
+    <!--<property name="ae-cloudsql.local-database-url" value="jdbc:mysql://google/imagedb?cloudSqlInstance=gallerytwo-169518:us-west1:gallery&amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory" />-->
+  </system-properties>
 </appengine-web-app>

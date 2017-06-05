@@ -24,7 +24,7 @@
     <resource url="http://gwtproject.org/doctype/2.8.0/gwt-module.dtd" location="$USER_HOME$/Library/Caches/IdeaIC2016.2/extResources/712bfa5b_gwt-module.dtd" />
     <resource url="https://raw.githubusercontent.com/vaadin/gwt/master/user/src/com/google/gwt/uibinder/resources/UiBinder.xsd" location="$USER_HOME$/Projects/GWTProjects/GalleryTwoApp" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

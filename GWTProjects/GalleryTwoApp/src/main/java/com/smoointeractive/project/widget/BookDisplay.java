@@ -1,6 +1,10 @@
 package com.smoointeractive.project.widget;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.logical.shared.ResizeEvent;
+import com.google.gwt.event.logical.shared.ResizeHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.uibinder.client.UiField;
@@ -45,7 +49,7 @@ PaperInput pageIndicator;
 
     public BookDisplay()
     {
-        setDataSource(new ArrayList<>());
+        setDataSource(new ArrayList<DummyBookModel>());
         initWidget(testUiBinder.createAndBindUi(this));
     }
 
@@ -63,13 +67,16 @@ PaperInput pageIndicator;
         // pixel dimensions. Using getOffsetWidth | getOffsetHeight return 0 value.
 
         // add browser resize event
-        Window.addResizeHandler(event -> {
-            int panelWidth = RootPanel.get().getOffsetWidth(); //(int)Math.round(Window.getClientWidth() * 0.98);
-            int panelHeight = (int)Math.round(Window.getClientHeight() * 0.82);
+        Window.addResizeHandler(new ResizeHandler() {
+            @Override
+            public void onResize(ResizeEvent event) {
+                int panelWidth = RootPanel.get().getOffsetWidth(); //(int)Math.round(Window.getClientWidth() * 0.98);
+                int panelHeight = (int) Math.round(Window.getClientHeight() * 0.82);
 
-            GWT.log(String.valueOf(getParent().getElement().getClientWidth()));
+                GWT.log(String.valueOf(BookDisplay.this.getParent().getElement().getClientWidth()));
 
-            book.setPixelSize(panelWidth, panelHeight);
+                book.setPixelSize(panelWidth, panelHeight);
+            }
         });
 
         int panelWidth = RootPanel.get().getOffsetWidth(); //(int)Math.round(Window.getClientWidth() * 0.98);
@@ -89,8 +96,18 @@ PaperInput pageIndicator;
         imageLoader.setPageIndicator(pageIndicator);
 
         // add click events to navigation buttons
-        previousButton.addClickHandler(event -> imageLoader.previous());
-        nextButton.addClickHandler(event -> imageLoader.next());
+        previousButton.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                imageLoader.previous();
+            }
+        });
+        nextButton.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                imageLoader.next();
+            }
+        });
 
         // add to bookdisplayevent
         imageLoader.addEventLister(this);
