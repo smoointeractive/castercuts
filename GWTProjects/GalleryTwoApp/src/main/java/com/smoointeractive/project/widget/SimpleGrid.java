@@ -77,7 +77,7 @@ public class SimpleGrid extends Composite {
                     @Override
                     public void onClick(ClickEvent event) {
                         SimpleGridButton selectedButton = (SimpleGridButton)event.getSource();
-                        String selectedItemImageUrl = "images/"+dataSource.get(selectedButton.getSimpleGridItemIndex()).getImageurl();
+                        String selectedItemImageUrl = "images/gallery/"+dataSource.get(selectedButton.getSimpleGridItemIndex()).getImageurl();
                         com.google.gwt.core.client.GWT.log(selectedItemImageUrl);
                         launchDialogBox(selectedItemImageUrl);
 //                        launchDialogBox(selectedButton.getHTML());

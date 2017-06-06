@@ -22,7 +22,7 @@ public class ImageLoader {
     private int currentIndex = 0;
     private RichTextArea textArea;
     private PaperInput indicator;
-    private static final String pathPrefix = "images/";
+    private static final String pathPrefix = "images/dummy/";
     private BookDisplayEvent bookDisplayEvent;
 
     public ImageLoader(PaperCard card)
