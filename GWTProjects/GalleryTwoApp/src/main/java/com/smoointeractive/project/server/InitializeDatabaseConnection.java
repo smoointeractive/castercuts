@@ -10,7 +10,6 @@ import java.sql.SQLException;
  * Created by sachamoo on 6/3/17.
  */
 public class InitializeDatabaseConnection {
-    private static InitializeDatabaseConnection sInstance = null;
     private Connection dataConnection;
     private final String username = "root";
     private final String password = "7K5LJaNOchhJ6ex1";
@@ -26,19 +25,11 @@ public class InitializeDatabaseConnection {
         }
     }
 
-    public static InitializeDatabaseConnection sGetInstance()
-    {
-        if(sInstance == null) {
-            sInstance = new InitializeDatabaseConnection();
-        }
-
-        return sInstance;
-    }
-
     private void initializeConnection() throws ServletException, SQLException {
         String url;
         if (System
                 .getProperty("com.google.appengine.runtime.version").startsWith("Google App Engine/")) {
+            System.out.println("---+-----+----- Google app engine");
             // Check the System properties to determine if we are running on appengine or not
             // Google App Engine sets a few system properties that will reliably be present on a remote
             // instance.
@@ -50,6 +41,7 @@ public class InitializeDatabaseConnection {
                 throw new ServletException("Error loading Google JDBC Driver", e);
             }
         } else {
+            System.out.println("--- - ----- - ----- local");
             // Set the url with the local MySQL database connection url when running locally
             url = System.getProperty("ae-cloudsql.local-database-url");
         }

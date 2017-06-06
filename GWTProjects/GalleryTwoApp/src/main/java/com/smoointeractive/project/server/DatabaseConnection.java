@@ -46,17 +46,8 @@ public class DatabaseConnection {
         String connectionResult = "Error connecting to database";
         try
         {
-            String driver = "com.mysql.jdbc.Driver";
-            String databaseUrl = "jdbc:mysql://localhost/imagedb";
-            String user = "root";
-            String password = "OB?A1a&-KGw1"; // temp
-
-           /* Class.forName(driver).newInstance();
-            databaseConnection = DriverManager.getConnection(databaseUrl,
-                                                             user,
-                                                             password);*/
-
-           databaseConnection = InitializeDatabaseConnection.sGetInstance().getDataConnection();
+           InitializeDatabaseConnection connection = new InitializeDatabaseConnection();
+           databaseConnection = connection.getDataConnection();
 
             if(databaseConnection == null) {
                 System.out.println("----->>>" + databaseConnection.getClientInfo());
