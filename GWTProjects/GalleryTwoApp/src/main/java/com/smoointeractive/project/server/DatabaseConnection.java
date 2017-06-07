@@ -57,6 +57,8 @@ public class DatabaseConnection {
             Statement statement = databaseConnection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM "+table);
 
+            int callCount = 0;
+
             while(resultSet.next())
             {
 //                switch(table) {
@@ -69,13 +71,16 @@ public class DatabaseConnection {
 //                        populateDummyBookList(resultSet);
 //                        break;
 //                }
+//                System.out.println("************** count is " + callCount);
+
                 if(galleryDatabase == table) {
-                    System.out.println("gallery data");
+//                    System.out.println("gallery data");
                     populateImageGalleryList(resultSet);
                 } else if(dummyDatabase == table){
-                    System.out.println("dummy book data");
+//                    System.out.println("dummy book data");
                     populateDummyBookList(resultSet);
                 }
+                callCount++;
             }
 
             databaseConnection.close();
