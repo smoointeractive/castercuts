@@ -19,7 +19,12 @@ public class DataServiceImpl extends RemoteServiceServlet implements DataService
     @Override
     public String LoadData(AvailableDatabases db) {
         databaseConnection = new DatabaseConnection();
-        String databaseInitializationResult = databaseConnection.ConnectToDatabase(db);
+        String databaseInitializationResult = null;
+        try {
+            databaseInitializationResult = databaseConnection.ConnectToDatabase(db);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         return databaseInitializationResult;
     }
