@@ -23,7 +23,7 @@
      project:region:instance for Cloud SQL 2nd Generation or
      project:instance        for Cloud SQL 1st Generation
 -->
-    <INSTANCE_CONNECTION_NAME>gallerytwo-169518:us-west1:gallery</INSTANCE_CONNECTION_NAME>
+    <INSTANCE_CONNECTION_NAME>gallerytwo-169518:us-west1:imagegallery2</INSTANCE_CONNECTION_NAME>
     <user>root</user>
     <password>7K5LJaNOchhJ6ex1</password>
     <database>imagedb</database>
