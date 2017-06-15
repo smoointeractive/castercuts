@@ -8,6 +8,7 @@ import com.smoointeractive.project.shared.AvailableDatabases;
 import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import com.smoointeractive.project.widget.Main;
+//import com.sun.tools.hat.internal.model.Root;
 import com.vaadin.polymer.Polymer;
 import com.vaadin.polymer.elemental.Function;
 import com.vaadin.polymer.iron.IronIconElement;
@@ -32,7 +33,7 @@ public class GalleryTwo implements EntryPoint {
    * Create a remote service proxy to talk to the server-side Greeting service.
    */
 //  private final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
-    private final DataServiceAsync dataService = GWT.create(DataService.class);
+    private final DataServiceAsync dataService = null;//GWT.create(DataService.class);
   /**
    * This is the entry point method.
    */
@@ -48,6 +49,8 @@ public class GalleryTwo implements EntryPoint {
 //
 //    RootPanel.get().add(simpleGrid);
 //    RootPanel.get().add(table);
+
+
 
     // We have to load icon set before application runs
     // importHref expects the following
@@ -69,7 +72,9 @@ public class GalleryTwo implements EntryPoint {
 
   private void initiateApplication() {
 //   InitializeDummyBookData();
-    InitializeImageGalleryData();
+//    ---> test InitializeImageGalleryData();
+    main = new Main();
+    RootPanel.get().add(main);
     com.google.gwt.core.client.GWT.log("EntryPoint imagesList: " + ((imagesList!=null)?"valid":"invalid"));
 
 

@@ -1,6 +1,7 @@
 package com.smoointeractive.project.server;
 
 import com.smoointeractive.project.shared.AvailableDatabases;
+import com.smoointeractive.project.shared.DatabaseConnectionResponse;
 import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import org.apache.commons.codec.binary.Base64;
@@ -26,25 +27,25 @@ public class DatabaseConnection {
         dummyBookImageList = new ArrayList<>();
     }
 
-    public String ConnectToDatabase(AvailableDatabases db) throws SQLException {
-        String connectionResult = "Error connecting to selected database";
+    public DatabaseConnectionResponse ConnectToDatabase(AvailableDatabases db) throws SQLException {
+        DatabaseConnectionResponse connectionResponse = DatabaseConnectionResponse.FAILURE;
 
         switch(db)
         {
             case GALLERY:
                 resultSet = connectToTable(galleryDatabase);
                 populateImageGalleryList(resultSet);
-                connectionResult = "Connected!";//connectToTable(galleryDatabase);
+                connectionResponse = DatabaseConnectionResponse.SUCCESS;
                 break;
             case DUMMY:
                 resultSet = connectToTable(dummyDatabase);
                 populateDummyBookList(resultSet);
-                connectionResult = "Connected!";//connectToTable(dummyDatabase);
+                connectionResponse = DatabaseConnectionResponse.SUCCESS;
                 break;
             default:
                 break;
         }
-        return connectionResult;
+        return connectionResponse;
     }
 
     private ResultSet connectToTable(String table) {
@@ -134,7 +135,12 @@ public class DatabaseConnection {
 
     public ArrayList<ImageGalleryDataModel> GetImageGalleryList()
     {
+        System.out.println("GetImageGalleryList called");
         return imageGalleryList;
     }
-    public ArrayList<DummyBookModel> GetDummyBookImageList() {return dummyBookImageList;}
+    public ArrayList<DummyBookModel> GetDummyBookImageList()
+    {
+        System.out.println("GetDummyBookImageList called");
+        return dummyBookImageList;
+    }
 }

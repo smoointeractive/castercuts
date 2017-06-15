@@ -75,6 +75,7 @@
             <p:PaperTab ui:field="tab4">Dummy Art -- What's taking so long!</p:PaperTab>
         </p:PaperTabs>
         <!--</p:PaperToolbar>-->
+        <p:PaperSpinner active="true"></p:PaperSpinner>
         <i:IronPages ui:field="pages" selected="0">
             <div>One</div>
             <div><w:SimpleGrid ui:field="imageGrid"/></div>
