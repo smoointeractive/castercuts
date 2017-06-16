@@ -3,6 +3,7 @@ package com.smoointeractive.project.server;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.smoointeractive.project.client.DataService;
 import com.smoointeractive.project.shared.AvailableDatabases;
+import com.smoointeractive.project.shared.DatabaseConnectionResponse;
 import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 
@@ -17,9 +18,9 @@ public class DataServiceImpl extends RemoteServiceServlet implements DataService
     public DatabaseConnection databaseConnection;
 
     @Override
-    public String LoadData(AvailableDatabases db) {
+    public DatabaseConnectionResponse LoadData(AvailableDatabases db) {
         databaseConnection = new DatabaseConnection();
-        String databaseInitializationResult = null;
+        DatabaseConnectionResponse databaseInitializationResult = null;
         try {
             databaseInitializationResult = databaseConnection.ConnectToDatabase(db);
         } catch (SQLException e) {

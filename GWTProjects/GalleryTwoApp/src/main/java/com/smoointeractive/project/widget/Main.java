@@ -7,13 +7,14 @@ import com.google.gwt.uibinder.client.*;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.*;
-import com.smoointeractive.project.client.DataService;
 import com.smoointeractive.project.client.DataServiceAsync;
 import com.smoointeractive.project.client.GalleryTwoIocContainer;
 import com.smoointeractive.project.shared.AvailableDatabases;
+import com.smoointeractive.project.shared.DatabaseConnectionResponse;
 import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import com.vaadin.polymer.iron.widget.IronPages;
+import com.vaadin.polymer.paper.widget.PaperSpinner;
 import com.vaadin.polymer.paper.widget.PaperTab;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ import java.util.logging.Logger;
  */
 public class Main extends Composite implements HasWidgets{
 
-    private int rowCount = 6;
+    private int columnCount = 6;
 
     interface MainUiBinder extends UiBinder<Widget, Main> {
 
@@ -41,11 +42,12 @@ public class Main extends Composite implements HasWidgets{
 
     private final DataServiceAsync dataService = (DataServiceAsync) GalleryTwoIocContainer.GetInstance().Resolve("dataservice");
     private Logger logger;
+    private static DatabaseConnectionResponse databaseConnectionResponse = DatabaseConnectionResponse.FAILURE;
 
     @UiField
     HTMLPanel mainPanel;
-    @UiField
-    SimpleGrid imageGrid;
+//    @UiField
+//    SimpleGrid imageGrid;
     @UiField
     BookDisplay dummyBookDisplay;
     @UiField
@@ -58,6 +60,8 @@ public class Main extends Composite implements HasWidgets{
     PaperTab tab3;
     @UiField
     PaperTab tab4;
+    @UiField
+    PaperSpinner spinner;
 
     @UiConstructor
     public Main()
@@ -99,7 +103,8 @@ public class Main extends Composite implements HasWidgets{
                 GWT.log("2nd tab");
                 System.out.println("2nd tab pressed");
 
-                if(null != imageGalleryData && 0 != imageGalleryData.size()) {
+                if(DatabaseConnectionResponse.SUCCESS == databaseConnectionResponse &&
+                        null == imageGalleryData) {
                     BuildImageGallery();
                 }
             }
@@ -131,7 +136,7 @@ public class Main extends Composite implements HasWidgets{
     @UiFactory
     public SimpleGrid MakeSimpleGrid()
     {
-        return new SimpleGrid(imageGalleryData, rowCount);
+        return new SimpleGrid(imageGalleryData, columnCount);
     }
 
     @UiFactory
@@ -178,7 +183,8 @@ public class Main extends Composite implements HasWidgets{
 
     private void LoadImageGalleryData()
     {
-        dataService.LoadData(AvailableDatabases.GALLERY, new AsyncCallback<String>() {
+        spinner.setActive(true);
+        dataService.LoadData(AvailableDatabases.GALLERY, new AsyncCallback<DatabaseConnectionResponse>() {
             @Override
             public void onFailure(Throwable caught) {
                 com.google.gwt.core.client.GWT.log("Error loading data. Error message: " + caught.getMessage());
@@ -186,19 +192,21 @@ public class Main extends Composite implements HasWidgets{
             }
 
             @Override
-            public void onSuccess(String result) {
+            public void onSuccess(DatabaseConnectionResponse result) {
                 com.google.gwt.core.client.GWT.log(result.toString());
                 logger.log(Level.INFO, result.toString());
+                databaseConnectionResponse = result;
+                spinner.setActive(false);
             }
         });
     }
-
 
     private void BuildImageGallery() {
         dataService.GetImageGalleryData(new AsyncCallback<ArrayList<ImageGalleryDataModel>>() {
             @Override
             public void onFailure(Throwable caught) {
                 GWT.log("Error retrieving data. Error message: " + caught.getMessage());
+                spinner.setActive(true);
             }
 
             @Override
@@ -207,9 +215,11 @@ public class Main extends Composite implements HasWidgets{
                 GWT.log("---------<<<<<<<<<"+ imageGalleryData.size());
                 System.out.println("---------<<<<<<<<<"+ imageGalleryData.size());
                 logger.log(Level.INFO, "---------<<<<<<<<<"+ imageGalleryData.size());
-
-                imageGrid = MakeSimpleGrid();
-                addMyContent(imageGrid);
+                RootPanel.get("two").add(MakeSimpleGrid());
+//                imageGrid = MakeSimpleGrid();
+//                addMyContent(imageGrid);
+//                addMyContent(imageGrid);
+                spinner.setActive(false);
             }
         });
     }

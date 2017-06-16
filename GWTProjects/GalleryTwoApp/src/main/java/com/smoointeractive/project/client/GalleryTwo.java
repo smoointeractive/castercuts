@@ -2,9 +2,12 @@ package com.smoointeractive.project.client;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.*;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.*;
 import com.smoointeractive.project.shared.AvailableDatabases;
+import com.smoointeractive.project.shared.DatabaseConnectionResponse;
 import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import com.smoointeractive.project.widget.Main;
@@ -14,6 +17,7 @@ import com.vaadin.polymer.elemental.Function;
 import com.vaadin.polymer.iron.IronIconElement;
 import com.vaadin.polymer.paper.PaperIconItemElement;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -76,8 +80,6 @@ public class GalleryTwo implements EntryPoint {
     main = new Main();
     RootPanel.get().add(main);
     com.google.gwt.core.client.GWT.log("EntryPoint imagesList: " + ((imagesList!=null)?"valid":"invalid"));
-
-
   }
 
   private void initializeImageGalleryDataSource(TextBox label)
@@ -157,7 +159,7 @@ public class GalleryTwo implements EntryPoint {
 
   private void InitializeImageGalleryData()
   {
-    dataService.LoadData(AvailableDatabases.GALLERY, new AsyncCallback<String>() {
+    dataService.LoadData(AvailableDatabases.GALLERY, new AsyncCallback<DatabaseConnectionResponse>() {
       @Override
       public void onFailure(Throwable caught) {
         com.google.gwt.core.client.GWT.log("InitializeImageGalleryData: LoadData: Failure trying to receive data from database");
@@ -165,7 +167,7 @@ public class GalleryTwo implements EntryPoint {
       }
 
       @Override
-      public void onSuccess(String result) {
+      public void onSuccess(DatabaseConnectionResponse result) {
         com.google.gwt.core.client.GWT.log("---------------------- " + result);
 
         TextBox messageLabel = new TextBox();
@@ -177,7 +179,7 @@ public class GalleryTwo implements EntryPoint {
 
   private void InitializeDummyBookData()
   {
-    dataService.LoadData(AvailableDatabases.DUMMY, new AsyncCallback<String>() {
+    dataService.LoadData(AvailableDatabases.DUMMY, new AsyncCallback<DatabaseConnectionResponse>() {
       @Override
       public void onFailure(Throwable caught) {
         com.google.gwt.core.client.GWT.log("InitializeDummyBookData: LoadData: Failure trying to receive data from database");
@@ -185,7 +187,7 @@ public class GalleryTwo implements EntryPoint {
       }
 
       @Override
-      public void onSuccess(String result) {
+      public void onSuccess(DatabaseConnectionResponse result) {
 //        System.out.println("---------------------- " + result);
         com.google.gwt.core.client.GWT.log("---------------------- " + result);
 
