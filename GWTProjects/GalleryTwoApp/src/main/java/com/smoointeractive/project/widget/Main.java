@@ -14,6 +14,7 @@ import com.smoointeractive.project.shared.DatabaseConnectionResponse;
 import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import com.vaadin.polymer.iron.widget.IronPages;
+import com.vaadin.polymer.paper.widget.PaperDialog;
 import com.vaadin.polymer.paper.widget.PaperSpinner;
 import com.vaadin.polymer.paper.widget.PaperTab;
 
@@ -43,11 +44,11 @@ public class Main extends Composite implements HasWidgets{
     private final DataServiceAsync dataService = (DataServiceAsync) GalleryTwoIocContainer.GetInstance().Resolve("dataservice");
     private Logger logger;
     private static DatabaseConnectionResponse databaseConnectionResponse = DatabaseConnectionResponse.FAILURE;
+    private PopupPanel loadingModalPopup;
+    private PaperDialog paperDialog;
 
     @UiField
     HTMLPanel mainPanel;
-//    @UiField
-//    SimpleGrid imageGrid;
     @UiField
     BookDisplay dummyBookDisplay;
     @UiField
@@ -183,7 +184,7 @@ public class Main extends Composite implements HasWidgets{
 
     private void LoadImageGalleryData()
     {
-        spinner.setActive(true);
+        ShowLoadingModalWindow();
         dataService.LoadData(AvailableDatabases.GALLERY, new AsyncCallback<DatabaseConnectionResponse>() {
             @Override
             public void onFailure(Throwable caught) {
@@ -196,7 +197,7 @@ public class Main extends Composite implements HasWidgets{
                 com.google.gwt.core.client.GWT.log(result.toString());
                 logger.log(Level.INFO, result.toString());
                 databaseConnectionResponse = result;
-                spinner.setActive(false);
+                loadingModalPopup.hide();
             }
         });
     }
@@ -206,7 +207,7 @@ public class Main extends Composite implements HasWidgets{
             @Override
             public void onFailure(Throwable caught) {
                 GWT.log("Error retrieving data. Error message: " + caught.getMessage());
-                spinner.setActive(true);
+                loadingModalPopup.show();
             }
 
             @Override
@@ -215,12 +216,21 @@ public class Main extends Composite implements HasWidgets{
                 GWT.log("---------<<<<<<<<<"+ imageGalleryData.size());
                 System.out.println("---------<<<<<<<<<"+ imageGalleryData.size());
                 logger.log(Level.INFO, "---------<<<<<<<<<"+ imageGalleryData.size());
-                RootPanel.get("two").add(MakeSimpleGrid());
-//                imageGrid = MakeSimpleGrid();
-//                addMyContent(imageGrid);
-//                addMyContent(imageGrid);
-                spinner.setActive(false);
+                RootPanel.get("tab2").add(MakeSimpleGrid());
+                loadingModalPopup.hide();
             }
         });
+    }
+
+    private void ShowLoadingModalWindow()
+    {
+        loadingModalPopup = new PopupPanel();
+        loadingModalPopup.setGlassEnabled(true);
+        loadingModalPopup.center();
+        PaperSpinner spinner = new PaperSpinner();
+        spinner.setActive(true);
+        loadingModalPopup.add(spinner);
+//        loadingModalPopup.add(new Label("Loading..."));
+        loadingModalPopup.show();
     }
 }
