@@ -1,9 +1,6 @@
 package com.smoointeractive.project.client;
 
 import com.google.gwt.core.client.GWT;
-import com.smoointeractive.project.widget.Main;
-
-
 import java.util.HashMap;
 import java.util.logging.Logger;
 
@@ -12,9 +9,6 @@ import java.util.logging.Logger;
  */
 public class GalleryTwoIocContainer {
     private static GalleryTwoIocContainer sInstance = null;
-//    private Logger logger;
-//    private DataService dataservice;
-//    private Main main;
     private HashMap<String, Object> objectInstanceTable;
 
     public GalleryTwoIocContainer()

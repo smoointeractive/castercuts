@@ -75,8 +75,6 @@ public class SimpleGrid extends Composite {
                     horizontalPanel.getElement().getStyle().setProperty("margin", "auto");
                     verticalPanel.add(horizontalPanel);
                 }
-//                Button thumbnailButton = new Button("<img src='" +
-//                        dataSource.get(i).getThumbnail() +"' width='150'></img>");
                 // get the appropriate thumbnail size based on row count and screen size
 
                 int thumbnailWidth = CalculateThumbnailSize.getMaxWidth(columnCount, Window.getClientWidth());
@@ -85,7 +83,6 @@ public class SimpleGrid extends Composite {
 
                 SimpleGridButton thumbnailButton = new SimpleGridButton("<img src='" +
                         dataSource.get(i).getThumbnail() +"'></img>");
-//                        dataSource.get(i).getThumbnail() +"' width='" + thumbnailWidth + "'></img>");
                 thumbnailButton.setSimpleGridItemIndex(i);
                 thumbnailButton.addClickHandler(new ClickHandler() {
                     @Override
@@ -94,7 +91,6 @@ public class SimpleGrid extends Composite {
                         String selectedItemImageUrl = "images/gallery/"+dataSource.get(selectedButton.getSimpleGridItemIndex()).getImageurl();
                         com.google.gwt.core.client.GWT.log(selectedItemImageUrl);
                         launchDialogBox(selectedItemImageUrl);
-//                        launchDialogBox(selectedButton.getHTML());
                     }
                 });
                 horizontalPanel.add(thumbnailButton);
@@ -118,17 +114,11 @@ public class SimpleGrid extends Composite {
     private void launchDialogBox(String html)
     {
         com.google.gwt.core.client.GWT.log(html);
-//        com.google.gwt.core.client.GWT.log(html.split("\"")[1].toString());
-
-//        String base64String = html.split("\"")[1];
-//        Image image = new Image(base64String);
         Image image = new Image(html);
         image.addLoadHandler(new LoadHandler() {
             @Override
             public void onLoad(LoadEvent event) {
                 Image img = (Image) event.getSource();
-//            img.getElement().setAttribute("maxheight", "200px");
-//            img.getElement().setAttribute("maxwidth", "100px");
                 double scaleFactor = 0.50; // TODO: 4/28/17 replace hardcoded scalefactor with automatic scaling based on rootpanel offsetHeight
                 int newWidth = (int) Math.round(img.getWidth() * scaleFactor);
                 int newHeight = (int) Math.round(img.getHeight() * scaleFactor);
@@ -138,7 +128,6 @@ public class SimpleGrid extends Composite {
                 img.getElement().setAttribute("height", String.valueOf(newHeight));
 
                 imageDialogBox.center();
-
             }
         });
 
@@ -148,17 +137,5 @@ public class SimpleGrid extends Composite {
         imageDialogBox.setAutoHideEnabled(true);
         imageDialogBox.setWidget(image);
         imageDialogBox.show();
-//        imageDialogBox.setWidget(widget);
-
-//        image.setUrl(base64String);
-//        Button btn = new Button("x");
-//        btn.addClickHandler(event -> imageDialogBox.hide());
-
-//        VerticalPanel htmlPanel = new VerticalPanel();
-//        htmlPanel.add(btn);
-//        htmlPanel.add(image);
-
-
-
     }
 }

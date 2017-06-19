@@ -3,30 +3,9 @@
              xmlns:w='urn:import:com.smoointeractive.project.widget'
              xmlns:p="urn:import:com.vaadin.polymer.paper.widget"
              xmlns:i="urn:import:com.vaadin.polymer.iron.widget">
-    <!--<ui:style>-->
-        <!--.paper-tabs {-->
-        <!--background-color: #00bcd4;-->
-        <!--color: #00bcd4;-->
-        <!--box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);-->
-        <!--}-->
-    <!--</ui:style>-->
-    <!--<ui:style>-->
-        <!--.container paper-button.colored {-->
-        <!--background: #4285f4;-->
-        <!--color: #00bcd4;-->
-        <!--}-->
-    <!--</ui:style>-->
 
     <g:HTMLPanel ui:field="mainPanel">
         <style is="custom-style">
-            <!--paper-tabs {-->
-            <!--color: var(&#45;&#45;paper-purple-500);-->
-            <!--&#45;&#45;paper-tabs-selection-bar-color: blue;-->
-            <!--}-->
-            <!--paper-toolbar {-->
-            <!--body {-->
-                <!--background-color:#FFFFD2-->
-            <!--}-->
             body {
             background-color: whitesmoke;
             }
@@ -56,37 +35,17 @@
             --paper-icon-button-ink-color: var(--paper-indigo-500);
             }
         </style>
-        <!--<iron-pages selected="0">-->
-            <!--<div>One</div>-->
-            <!--<div>Two</div>-->
-            <!--<div>Three</div>-->
-        <!--</iron-pages>-->
-
-        <!--<p:PaperButton toggles="true" raised="true" active="true" addStyleNames="{style.colored}">active</p:PaperButton>-->
-
-
-        <!--<p:PaperToolbar>-->
-        <!--<p:PaperIconButton icon="menu"/>-->
-        <!--<span class="title">Toolbar</span>-->
         <p:PaperTabs ui:field="tab"  selected="0">
             <p:PaperTab ui:field="tab1">Sketch Art</p:PaperTab>
             <p:PaperTab ui:field="tab2">Concept Art</p:PaperTab>
             <p:PaperTab ui:field="tab3">Dummy Art -- Friend's Inc.</p:PaperTab>
             <p:PaperTab ui:field="tab4">Dummy Art -- What's taking so long!</p:PaperTab>
         </p:PaperTabs>
-        <!--</p:PaperToolbar>-->
-        <!--<p:PaperSpinner ui:field="spinner" active="false"></p:PaperSpinner>-->
         <i:IronPages ui:field="pages" selected="0">
             <section id="tab1">One</section>
-            <!--<section><w:SimpleGrid ui:field="imageGrid"/></section>-->
             <section id="tab2"></section>
-            <!--<section id="tab3"><w:BookDisplay ui:field="dummyBookDisplay"/></section>-->
             <section id="tab3"></section>
             <section id="tab4">Four</section>
         </i:IronPages>
-
-        <!--<w:YamBook ui:field="dummyBook" />-->
-
-        <!--<w:CustomImageTable/>-->
     </g:HTMLPanel>
 </ui:UiBinder>

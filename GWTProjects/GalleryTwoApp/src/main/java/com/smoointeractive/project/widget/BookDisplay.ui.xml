@@ -19,7 +19,6 @@
             height: 100%;
             }
             .paper-input {
-            <!--padding-bottom: 40px;-->
             --paper-input-container-input: {
             @apply(--layout-vertical);
             @apply(--layout-center-center);
@@ -37,12 +36,8 @@
             width: 70px;
             height: 70px;
             };
-            <!--font-size: 40;-->
-            <!--padding-left:20px;-->
-            <!--padding-right:20px;-->
             margin: 0px 0px 0px 24px;
             float: left;
-            <!--left: 100%;-->
             }
             .paper-icon-button-right {
             color: white;
@@ -50,13 +45,9 @@
             width: 70px;
             height: 70px;
             };
-            <!--font-size: 40;-->
-            <!--padding-left:20px;-->
-            <!--padding-right:20px-->
             margin: 0px 24px 0px 0px;
 
             float: right;
-            <!--right: 100%;-->
             }
             .horizontal-panel {
             background-color: #00bcd4;
@@ -68,29 +59,11 @@
             }
         </style>
         <p:PaperCard ui:field="book" addStyleNames="paper-card-style">
-            <!--<p:PaperIconButton toggles="true" icon="alarm">active</p:PaperIconButton>-->
             <i:IronImage ui:field="imageHolder" sizing="contain" width="100%" height="100%"/>
-        <!--<div class="page-description">-->
-        <!--<g:HTML>Hello this is a test!</g:HTML>-->
-        <!--</div>-->
-        <!--<div class="page-navigation">-->
-            <!--<div>-->
-                <!--<span>previous</span>-->
-                <!--<p:PaperIconButton ui:field="previousButton" icon="arrow-back"/>-->
-                <!--<g:RichTextArea ui:field="textArea"/>-->
-                <!--<span style='margin-right:1em;'></span> &lt;!&ndash;adjust spacing for page indicator&ndash;&gt;-->
-                <!--<span>next</span>-->
-                <!--<p:PaperIconButton ui:field="nextButton" icon="arrow-forward"/>-->
-                <!--&lt;!&ndash;<span style='margin-right:3em;'>next</span>&ndash;&gt;-->
-                <!--&lt;!&ndash;<span style='margin-left:35em;'>next</span>&ndash;&gt;-->
-            <!--&lt;!&ndash;<i:IronIcon icon="icons:arrow-forward"/>&ndash;&gt;-->
-            <!--</div>-->
-        <!--</div>-->
             <g:HorizontalPanel addStyleNames="horizontal-panel">
                 <p:PaperIconButton ui:field="previousButton"
                                    icon="arrow-back"
                                    addStyleNames="paper-icon-button-left">previous</p:PaperIconButton>
-                <!--<g:RichTextArea ui:field="textArea"/>-->
                 <p:PaperInput ui:field="pageIndicator"
                               readonly="true"
                               alwaysFloatLabel="false"

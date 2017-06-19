@@ -36,8 +36,6 @@ public class Main extends Composite implements HasWidgets{
 
     }
     private static MainUiBinder mainUiBinder = GWT.create(MainUiBinder.class);
-
-//    private List<String> testList = Arrays.asList("1", "2", "3");
     private ArrayList<ImageGalleryDataModel> imageGalleryData;
     private ArrayList<DummyBookModel> dummyBookModelData;
 
@@ -78,7 +76,6 @@ public class Main extends Composite implements HasWidgets{
     }
 
     private void initializeContent() {
-//        ArrayList<ImageGalleryDataModel> imageGalleryData = ;
         GWT.log("EntryPoint imageGalleryData: " + ((imageGalleryData !=null)?"valid":"invalid"));
         logger.log(Level.INFO, "EntryPoint imageGalleryData: " + ((imageGalleryData !=null)?"valid":"invalid"));
         initWidget(mainUiBinder.createAndBindUi(this));
@@ -229,15 +226,13 @@ public class Main extends Composite implements HasWidgets{
         dataService.GetImageGalleryData(new AsyncCallback<ArrayList<ImageGalleryDataModel>>() {
             @Override
             public void onFailure(Throwable caught) {
-                GWT.log("Error retrieving data. Error message: " + caught.getMessage());
+                logger.log(Level.SEVERE, "Error retrieving data. Error message: " + caught.getMessage());
                 loadingModalPopup.show();
             }
 
             @Override
             public void onSuccess(ArrayList<ImageGalleryDataModel> result) {
                 SetImageGalleryDataSource(result);
-                GWT.log("---------<<<<<<<<<"+ imageGalleryData.size());
-                System.out.println("---------<<<<<<<<<"+ imageGalleryData.size());
                 logger.log(Level.INFO, "---------<<<<<<<<<"+ imageGalleryData.size());
                 RootPanel.get("tab2").add(MakeSimpleGrid());
                 loadingModalPopup.hide();
@@ -249,7 +244,7 @@ public class Main extends Composite implements HasWidgets{
         dataService.GetDummyBookData(new AsyncCallback<ArrayList<DummyBookModel>>() {
             @Override
             public void onFailure(Throwable caught) {
-                GWT.log("Error retrieving data. Error message: " + caught.getMessage());
+                logger.log(Level.SEVERE, "Error retrieving data. Error message: " + caught.getMessage());
                 loadingModalPopup.show();
             }
 
@@ -271,7 +266,6 @@ public class Main extends Composite implements HasWidgets{
         PaperSpinner spinner = new PaperSpinner();
         spinner.setActive(true);
         loadingModalPopup.add(spinner);
-//        loadingModalPopup.add(new Label("Loading..."));
         loadingModalPopup.show();
     }
 }

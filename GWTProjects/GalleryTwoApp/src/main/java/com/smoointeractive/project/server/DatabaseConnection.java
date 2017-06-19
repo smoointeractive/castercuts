@@ -6,7 +6,6 @@ import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.StringUtils;
-
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -49,48 +48,26 @@ public class DatabaseConnection {
     }
 
     private ResultSet connectToTable(String table) {
-        String connectionResult = "Error connecting to database";
         try
         {
            InitializeDatabaseConnection connection = new InitializeDatabaseConnection();
            databaseConnection = connection.getDataConnection();
 
-            if(databaseConnection == null) {
+            if(null == databaseConnection) {
                 System.out.println("----->>>" + databaseConnection.getClientInfo());
                 System.out.println( "databaseConnnection is invalid!");
             }
 
             Statement statement = databaseConnection.createStatement();
-            resultSet = statement.executeQuery("SELECT * FROM "+table);
+            resultSet = statement.executeQuery("SELECT * FROM " + table);
 
             return resultSet;
-//            int callCount = 0;
-
-/*            while(resultSet.next())
-            {
-//                System.out.println("************** count is " + callCount);
-
-                if(galleryDatabase == table) {
-                    populateImageGalleryList(resultSet);
-                } else if(dummyDatabase == table){
-                    populateDummyBookList(resultSet);
-                }
-                callCount++;
-            }
-
-            databaseConnection.close();*/
-
-//            connectionResult = "Connected to Database.";
 
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("Error connecting to database - not good eh. Error message: "+ e.toString());
-//            return e.toString();
+            System.out.println("Error connecting to database - not good eh. Error message: " + e.toString());
             return null;
         }
-
-//        return connectionResult;
-//        return null;
     }
 
     private void populateImageGalleryList(ResultSet resultSet) throws SQLException {
@@ -106,6 +83,7 @@ public class DatabaseConnection {
             Blob imageBlobData = resultSet.getBlob("thumbnail");
             int imageBlobDataLength = (int) imageBlobData.length();
             byte[] imageBlobDataBytes = imageBlobData.getBytes(1, imageBlobDataLength);
+
             // store blob image data as base64 image string
             String base64Prefix = "data:image/jpg;base64,";
             StringBuilder stringBuilder = new StringBuilder();
@@ -128,7 +106,6 @@ public class DatabaseConnection {
             dummyBookModel.setName(resultSet.getString("name"));
             dummyBookModel.setDescription(resultSet.getString("description"));
             dummyBookModel.setImageurl(resultSet.getString("imageurl"));
-
             dummyBookImageList.add(dummyBookModel);
         }
     }

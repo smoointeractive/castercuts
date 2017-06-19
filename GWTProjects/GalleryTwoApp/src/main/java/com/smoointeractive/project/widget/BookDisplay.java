@@ -37,13 +37,10 @@ public class BookDisplay extends Composite implements BookDisplayEventListener {
     PaperIconButton previousButton;
     @UiField
     PaperIconButton nextButton;
-//    @UiField
-//    RichTextArea textArea;
     @UiField
-PaperInput pageIndicator;
+    PaperInput pageIndicator;
 
     ImageLoader imageLoader;
-    private ArrayList<String> testList = new ArrayList<>(Arrays.asList("01.jpg", "01.jpg", "02.jpg", "01.jpg"));
     private ArrayList<DummyBookModel> dataSource;
 
 
@@ -86,13 +83,8 @@ PaperInput pageIndicator;
 
         book.setPixelSize(panelWidth, panelHeight);
 
-//        textArea.setPixelSize(30, 30);
-
         imageLoader = new ImageLoader(imageHolder);
-//        imageLoader = new ImageLoader(book);
-//        imageLoader.setDatasource(testList);
         imageLoader.setDatasource(dataSource);
-//        imageLoader.setPageIndicator(textArea);
         imageLoader.setPageIndicator(pageIndicator);
 
         // add click events to navigation buttons
@@ -114,8 +106,6 @@ PaperInput pageIndicator;
 
 
         imageLoader.selectItem(0);
-
-//        book.setImage("01.jpg");
     }
 
     @Override

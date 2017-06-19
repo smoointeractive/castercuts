@@ -1,62 +1,27 @@
 package com.smoointeractive.project.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.*;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.*;
-import com.smoointeractive.project.shared.AvailableDatabases;
-import com.smoointeractive.project.shared.DatabaseConnectionResponse;
-import com.smoointeractive.project.shared.DummyBookModel;
-import com.smoointeractive.project.shared.ImageGalleryDataModel;
+import com.google.gwt.user.client.ui.RootPanel;
 import com.smoointeractive.project.widget.Main;
-//import com.sun.tools.hat.internal.model.Root;
 import com.vaadin.polymer.Polymer;
 import com.vaadin.polymer.elemental.Function;
 import com.vaadin.polymer.iron.IronIconElement;
 import com.vaadin.polymer.paper.PaperIconItemElement;
 
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
 public class GalleryTwo implements EntryPoint {
-  /**+++++++++++
-   * The message displayed to the user when the server cannot be reached or
-   * returns an error.
-   */
-  private static final String SERVER_ERROR = "An error occurred while "
-      + "attempting to contact the server. Please check your network "
-      + "connection and try again.";
 
-  /**
-   * Create a remote service proxy to talk to the server-side Greeting service.
-   */
-//  private final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
-    private final DataServiceAsync dataService = null;//GWT.create(DataService.class);
-  /**
-   * This is the entry point method.
-   */
-
-  private ArrayList<ImageGalleryDataModel> imagesList;
-  private ArrayList<DummyBookModel> dummyBookList;
   private Main main;
+  private Logger logger;
 
   public void onModuleLoad() {
-//  PaperButton button = new PaperButton("Hello Click Me!");
-//    SimpleGrid simpleGrid = new SimpleGrid();
-//    CustomImageTable table = new CustomImageTable();
-//
-//    RootPanel.get().add(simpleGrid);
-//    RootPanel.get().add(table);
-
-
-
-    // We have to load icon set before application runs
+    // We have to load icon image set before application runs
     // importHref expects the following
     //        param1: list
     //        parem2: Function instance
@@ -68,134 +33,16 @@ public class GalleryTwo implements EntryPoint {
               @Override
               public Object call(Object o) {
                 // app is executed when all imports succeed
-                GalleryTwo.this.initiateApplication();
+                GalleryTwo.this.initializeApplication();
                 return null;
               }
             });
   }
 
-  private void initiateApplication() {
-//   InitializeDummyBookData();
-//    ---> test InitializeImageGalleryData();
+  private void initializeApplication() {
+    logger = (Logger)GalleryTwoIocContainer.GetInstance().Resolve("logger");
     main = new Main();
     RootPanel.get().add(main);
-    com.google.gwt.core.client.GWT.log("EntryPoint imagesList: " + ((imagesList!=null)?"valid":"invalid"));
-  }
-
-  private void initializeImageGalleryDataSource(TextBox label)
-  {
-    // get data
-    dataService.GetImageGalleryData(new AsyncCallback<ArrayList<ImageGalleryDataModel>>() {
-      @Override
-      public void onFailure(Throwable caught) {
-        com.google.gwt.core.client.GWT.log("GetImageGalleryData: Failure trying to receive data from database");
-      }
-
-      @Override
-      public void onSuccess(ArrayList<ImageGalleryDataModel> result) {
-
-        com.google.gwt.core.client.GWT.log("initializeImageGalleryDataSource: ----------enterblock------------ length:" + result.size());
-
-        imagesList = result;
-
-        com.google.gwt.core.client.GWT.log("initializeImageGalleryDataSource result: " + ((result!=null)?"valid":"invalid"));
-        com.google.gwt.core.client.GWT.log("initializeImageGalleryDataSource imagesList: " + ((imagesList!=null)?"valid":"invalid"));
-
-        // grab image found in the first data object -- for testing
-//        ImageGalleryDataModel firstElement = imagesList.get(0);
-
-//        Image img = new Image(imagesList.get(0).getThumbnail());
-//
-//        RootPanel.get().add(img);
-
-        // since acquiring data is an asynchronous process, initializing Main here guaratees that data is ready
-        // to be passed on to main
-//        main = new Main(imagesList);
-//
-//        RootPanel.get().add(main);
-
-//        main = new Main(imagesList, dummyBookList);
-//        RootPanel.get().add(main);
-        InitializeDummyBookData();
-
-//          image.setUrl(firstElement.getThumbnail());
-        // add label to notify the user that the image should have been loaded
-//        label.setText(firstElement.getName() + " was loaded!!!" + ":  " + firstElement.getThumbnail());
-
-        com.google.gwt.core.client.GWT.log("initializeImageGalleryDataSource: -----------exitblock-----------");
-      }
-    });
-  }
-
-  private void initializeDummyBookDataSource(TextBox label)
-  {
-    // get data
-    dataService.GetDummyBookData(new AsyncCallback<ArrayList<DummyBookModel>>() {
-      @Override
-      public void onFailure(Throwable caught) {
-        com.google.gwt.core.client.GWT.log("GetDummyBookData: Failure trying to receive data from database");
-      }
-
-      @Override
-      public void onSuccess(ArrayList<DummyBookModel> result) {
-
-        com.google.gwt.core.client.GWT.log("initializeDummyBookDataSource: ----------enterblock------------ length:"+result.size());
-
-        dummyBookList = result;
-
-        com.google.gwt.core.client.GWT.log("initializeDummyBookDataSource result: " + ((result!=null)?"valid":"invalid"));
-        com.google.gwt.core.client.GWT.log("initializeDummyBookDataSource imagesList: " + ((dummyBookList!=null)?"valid":"invalid"));
-
-        // since acquiring data is an asynchronous process, initializing Main here guarantees that data is ready
-        // to be passed on to main
-//        main.SetDummyBookDataSource(dummyBookList);
-        main = new Main(imagesList, dummyBookList);
-        RootPanel.get().add(main);
-
-        com.google.gwt.core.client.GWT.log("initializeDummyBookDataSource: -----------exitblock-----------");
-      }
-    });
-  }
-
-  private void InitializeImageGalleryData()
-  {
-    dataService.LoadData(AvailableDatabases.GALLERY, new AsyncCallback<DatabaseConnectionResponse>() {
-      @Override
-      public void onFailure(Throwable caught) {
-        com.google.gwt.core.client.GWT.log("InitializeImageGalleryData: LoadData: Failure trying to receive data from database");
-//        System.out.println("Failure trying to receive data from database");
-      }
-
-      @Override
-      public void onSuccess(DatabaseConnectionResponse result) {
-        com.google.gwt.core.client.GWT.log("---------------------- " + result);
-
-        TextBox messageLabel = new TextBox();
-
-        initializeImageGalleryDataSource(messageLabel);
-      }
-    });
-  }
-
-  private void InitializeDummyBookData()
-  {
-    dataService.LoadData(AvailableDatabases.DUMMY, new AsyncCallback<DatabaseConnectionResponse>() {
-      @Override
-      public void onFailure(Throwable caught) {
-        com.google.gwt.core.client.GWT.log("InitializeDummyBookData: LoadData: Failure trying to receive data from database");
-//        System.out.println("Failure trying to receive data from database");
-      }
-
-      @Override
-      public void onSuccess(DatabaseConnectionResponse result) {
-//        System.out.println("---------------------- " + result);
-        com.google.gwt.core.client.GWT.log("---------------------- " + result);
-
-        TextBox messageLabel = new TextBox();
-//        RootPanel.get().add(messageLabel);
-
-        initializeDummyBookDataSource(messageLabel);
-      }
-    });
+    logger.log(Level.INFO, "Application entry point, 'Main', has been initialized.");
   }
 }

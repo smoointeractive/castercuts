@@ -98,10 +98,7 @@ public class ImageLoader {
     {
         if(null !=imagePaths && imagePaths.size() >= 1)
         {
-//            paperCard.getElement().setAttribute("sizing", "cover");
-//            paperCard.getElement().setAttribute("sizing", "cover");
             ironImage.setSrc(pathPrefix + imagePaths.get(currentIndex).getImageurl());
-//            paperCard.setImage(pathPrefix + imagePaths.get(currentIndex).getImageurl());
 
             if(null != textArea) textArea.setText(String.valueOf(currentIndex));
             if(null != indicator) indicator.setValue(String.valueOf(currentIndex));
