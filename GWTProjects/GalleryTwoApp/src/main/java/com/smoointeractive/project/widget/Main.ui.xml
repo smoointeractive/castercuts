@@ -75,12 +75,13 @@
             <p:PaperTab ui:field="tab4">Dummy Art -- What's taking so long!</p:PaperTab>
         </p:PaperTabs>
         <!--</p:PaperToolbar>-->
-        <p:PaperSpinner ui:field="spinner" active="false"></p:PaperSpinner>
+        <!--<p:PaperSpinner ui:field="spinner" active="false"></p:PaperSpinner>-->
         <i:IronPages ui:field="pages" selected="0">
             <section id="tab1">One</section>
             <!--<section><w:SimpleGrid ui:field="imageGrid"/></section>-->
-            <section id="tab2">Two</section>
-            <section id="tab3"><w:BookDisplay ui:field="dummyBookDisplay"/></section>
+            <section id="tab2"></section>
+            <!--<section id="tab3"><w:BookDisplay ui:field="dummyBookDisplay"/></section>-->
+            <section id="tab3"></section>
             <section id="tab4">Four</section>
         </i:IronPages>
 

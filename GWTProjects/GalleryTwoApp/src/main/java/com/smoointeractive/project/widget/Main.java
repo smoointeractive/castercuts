@@ -50,8 +50,6 @@ public class Main extends Composite implements HasWidgets{
     @UiField
     HTMLPanel mainPanel;
     @UiField
-    BookDisplay dummyBookDisplay;
-    @UiField
     IronPages pages;
     @UiField
     PaperTab tab1;
@@ -61,8 +59,6 @@ public class Main extends Composite implements HasWidgets{
     PaperTab tab3;
     @UiField
     PaperTab tab4;
-    @UiField
-    PaperSpinner spinner;
 
     @UiConstructor
     public Main()
@@ -101,8 +97,7 @@ public class Main extends Composite implements HasWidgets{
             @Override
             public void onClick(ClickEvent event) {
                 pages.selectIndex(1);
-                GWT.log("2nd tab");
-                System.out.println("2nd tab pressed");
+                logger.log(Level.INFO,"2nd tab pressed");
 
                 if(DatabaseConnectionResponse.SUCCESS == databaseConnectionResponse &&
                         null == imageGalleryData) {
@@ -114,6 +109,13 @@ public class Main extends Composite implements HasWidgets{
             @Override
             public void onClick(ClickEvent event) {
                 pages.selectIndex(2);
+                logger.log(Level.INFO,"3rd tab pressed");
+
+                if(DatabaseConnectionResponse.SUCCESS == databaseConnectionResponse &&
+                        null == dummyBookModelData) {
+                    LoadDummyGalleryData();
+                }
+
             }
         });
         tab4.addClickHandler(new ClickHandler() {
@@ -184,6 +186,7 @@ public class Main extends Composite implements HasWidgets{
 
     private void LoadImageGalleryData()
     {
+        databaseConnectionResponse = DatabaseConnectionResponse.FAILURE;
         ShowLoadingModalWindow();
         dataService.LoadData(AvailableDatabases.GALLERY, new AsyncCallback<DatabaseConnectionResponse>() {
             @Override
@@ -202,6 +205,26 @@ public class Main extends Composite implements HasWidgets{
         });
     }
 
+    private void LoadDummyGalleryData()
+    {
+        databaseConnectionResponse = DatabaseConnectionResponse.FAILURE;
+        ShowLoadingModalWindow();
+        dataService.LoadData(AvailableDatabases.DUMMY, new AsyncCallback<DatabaseConnectionResponse>() {
+            @Override
+            public void onFailure(Throwable caught) {
+                logger.log(Level.SEVERE, "Error loading data. Error message: " + caught.getMessage());
+            }
+
+            @Override
+            public void onSuccess(DatabaseConnectionResponse result) {
+                logger.log(Level.INFO, result.toString());
+                databaseConnectionResponse = result;
+
+                BuildDummyGallery();
+            }
+    });
+    }
+
     private void BuildImageGallery() {
         dataService.GetImageGalleryData(new AsyncCallback<ArrayList<ImageGalleryDataModel>>() {
             @Override
@@ -217,6 +240,24 @@ public class Main extends Composite implements HasWidgets{
                 System.out.println("---------<<<<<<<<<"+ imageGalleryData.size());
                 logger.log(Level.INFO, "---------<<<<<<<<<"+ imageGalleryData.size());
                 RootPanel.get("tab2").add(MakeSimpleGrid());
+                loadingModalPopup.hide();
+            }
+        });
+    }
+
+    private void BuildDummyGallery() {
+        dataService.GetDummyBookData(new AsyncCallback<ArrayList<DummyBookModel>>() {
+            @Override
+            public void onFailure(Throwable caught) {
+                GWT.log("Error retrieving data. Error message: " + caught.getMessage());
+                loadingModalPopup.show();
+            }
+
+            @Override
+            public void onSuccess(ArrayList<DummyBookModel> result) {
+                SetDummyBookDataSource(result);
+                logger.log(Level.INFO, "---------<<<<<<<<<"+ dummyBookModelData.size());
+                RootPanel.get("tab3").add(MakeBookDisplay());
                 loadingModalPopup.hide();
             }
         });
