@@ -9,13 +9,17 @@ import java.util.logging.Logger;
  */
 public class GalleryTwoIocContainer {
     private static GalleryTwoIocContainer sInstance = null;
-    private HashMap<String, Object> objectInstanceTable;
+    private HashMap<String, Object>objectInstanceTable;
 
     public GalleryTwoIocContainer()
     {
         objectInstanceTable = new HashMap<>();
         objectInstanceTable.put("logger", Logger.getLogger(""));
         objectInstanceTable.put("dataservice", GWT.create(DataService.class));
+        objectInstanceTable.put("dataloader", new DataLoader(
+                (DataServiceAsync) objectInstanceTable.get("dataservice"),
+                (Logger) objectInstanceTable.get("logger")
+        ));
     }
 
     public static GalleryTwoIocContainer GetInstance()
