@@ -7,13 +7,10 @@ import com.google.gwt.uibinder.client.*;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
 import com.smoointeractive.project.client.DataLoader;
-import com.smoointeractive.project.client.DataServiceAsync;
-import com.smoointeractive.project.client.GalleryTwoIocContainer;
-import com.smoointeractive.project.shared.DatabaseConnectionResponse;
+import com.smoointeractive.project.client.ServiceLocator;
 import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import com.vaadin.polymer.iron.widget.IronPages;
-import com.vaadin.polymer.paper.widget.PaperDialog;
 import com.vaadin.polymer.paper.widget.PaperTab;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -33,13 +30,7 @@ public class Main extends Composite implements HasWidgets{
     private static MainUiBinder mainUiBinder = GWT.create(MainUiBinder.class);
     private ArrayList<ImageGalleryDataModel> imageGalleryData;
     private ArrayList<DummyBookModel> dummyBookModelData;
-
-//    private final DataServiceAsync dataService = (DataServiceAsync) GalleryTwoIocContainer.GetInstance().Resolve("dataservice");
     private Logger logger;
-    private static DatabaseConnectionResponse databaseConnectionResponse = DatabaseConnectionResponse.FAILURE;
-    private PopupPanel loadingModalPopup;
-    private PaperDialog paperDialog;
-
     private DataLoader dataLoader;
 
     @UiField
@@ -61,8 +52,8 @@ public class Main extends Composite implements HasWidgets{
         initWidget(mainUiBinder.createAndBindUi(this));
         initializeEventHandlers();
 
-        logger = (Logger)GalleryTwoIocContainer.GetInstance().Resolve("logger");
-        dataLoader =(DataLoader)GalleryTwoIocContainer.GetInstance().Resolve("dataloader");
+        logger = (Logger) ServiceLocator.GetInstance().Resolve("logger");
+        dataLoader =(DataLoader) ServiceLocator.GetInstance().Resolve("dataloader");
     }
 
     public Main(ArrayList<ImageGalleryDataModel> imageGalleryData, ArrayList<DummyBookModel> dummyBookModelData)

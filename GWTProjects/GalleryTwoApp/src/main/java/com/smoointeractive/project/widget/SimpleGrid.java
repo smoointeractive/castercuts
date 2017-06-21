@@ -11,7 +11,7 @@ import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
 import com.smoointeractive.project.client.CalculateThumbnailSize;
-import com.smoointeractive.project.client.GalleryTwoIocContainer;
+import com.smoointeractive.project.client.ServiceLocator;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 
 import java.util.ArrayList;
@@ -78,7 +78,7 @@ public class SimpleGrid extends Composite {
                 // get the appropriate thumbnail size based on row count and screen size
 
                 int thumbnailWidth = CalculateThumbnailSize.getMaxWidth(columnCount, Window.getClientWidth());
-                Logger logger = (Logger)GalleryTwoIocContainer.GetInstance().Resolve("logger");
+                Logger logger = (Logger) ServiceLocator.GetInstance().Resolve("logger");
                 logger.log(Level.INFO, String.valueOf(thumbnailWidth));
 
                 SimpleGridButton thumbnailButton = new SimpleGridButton("<img src='" +

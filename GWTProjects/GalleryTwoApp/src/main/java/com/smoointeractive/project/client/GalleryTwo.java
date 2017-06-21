@@ -1,6 +1,7 @@
 package com.smoointeractive.project.client;
 
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.smoointeractive.project.widget.Main;
 import com.vaadin.polymer.Polymer;
@@ -40,7 +41,15 @@ public class GalleryTwo implements EntryPoint {
   }
 
   private void initializeApplication() {
-    logger = (Logger)GalleryTwoIocContainer.GetInstance().Resolve("logger");
+      // register object instances with service locator
+      ServiceLocator.GetInstance().Register("logger", Logger.getLogger(""));
+      ServiceLocator.GetInstance().Register("dataservice", GWT.create(DataService.class));
+      ServiceLocator.GetInstance().Register("dataloader", new DataLoader(
+                (DataServiceAsync) ServiceLocator.GetInstance().Resolve("dataservice"),
+                (Logger) ServiceLocator.GetInstance().Resolve("logger")
+      ));
+
+    logger = (Logger) ServiceLocator.GetInstance().Resolve("logger");
     main = new Main();
     RootPanel.get().add(main);
     logger.log(Level.INFO, "Application entry point, 'Main', has been initialized.");
