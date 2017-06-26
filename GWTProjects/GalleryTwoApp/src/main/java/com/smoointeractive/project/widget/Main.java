@@ -6,8 +6,9 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.*;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
-import com.smoointeractive.project.client.DataLoader;
-import com.smoointeractive.project.client.ServiceLocator;
+import com.smoointeractive.project.helper.DataLoader;
+import com.smoointeractive.project.helper.Callback;
+import com.smoointeractive.project.helper.ServiceLocator;
 import com.smoointeractive.project.shared.DummyBookModel;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 import com.vaadin.polymer.iron.widget.IronPages;
@@ -85,7 +86,7 @@ public class Main extends Composite implements HasWidgets{
                 logger.log(Level.INFO,"2nd tab pressed");
 
                 if(null == imageGalleryData) {
-                    dataLoader.LoadGalleryData(new com.smoointeractive.project.client.Callback<ImageGalleryDataModel>() {
+                    dataLoader.LoadGalleryData(new Callback<ImageGalleryDataModel>() {
                         @Override
                         public Object buildWidget(ArrayList<ImageGalleryDataModel> result) {
 
@@ -104,7 +105,7 @@ public class Main extends Composite implements HasWidgets{
                 logger.log(Level.INFO,"3rd tab pressed");
 
                 if(null == dummyBookModelData) {
-                    dataLoader.LoadDummyData(new com.smoointeractive.project.client.Callback<DummyBookModel>() {
+                    dataLoader.LoadDummyData(new Callback<DummyBookModel>() {
                         @Override
                         public Object buildWidget(ArrayList<DummyBookModel> result) {
                             SetDummyBookDataSource(result);

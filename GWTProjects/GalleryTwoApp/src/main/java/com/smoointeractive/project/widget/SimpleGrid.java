@@ -10,8 +10,8 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
-import com.smoointeractive.project.client.CalculateThumbnailSize;
-import com.smoointeractive.project.client.ServiceLocator;
+import com.smoointeractive.project.helper.CalculateThumbnailSize;
+import com.smoointeractive.project.helper.ServiceLocator;
 import com.smoointeractive.project.shared.ImageGalleryDataModel;
 
 import java.util.ArrayList;

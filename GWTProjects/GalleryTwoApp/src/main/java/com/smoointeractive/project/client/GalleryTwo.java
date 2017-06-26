@@ -3,6 +3,8 @@ package com.smoointeractive.project.client;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.RootPanel;
+import com.smoointeractive.project.helper.DataLoader;
+import com.smoointeractive.project.helper.ServiceLocator;
 import com.smoointeractive.project.widget.Main;
 import com.vaadin.polymer.Polymer;
 import com.vaadin.polymer.elemental.Function;
